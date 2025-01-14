@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome | Food World</title>
+    <link rel="shortcut icon" type="image/png" href="img/food%20world.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is a magazine website about recipes and other related content">
+    <meta name="keywords" content="recipes, food quizzes, interviews of chefs, and cooking tips">
+    <meta name="author" content="Alba Haque Sultana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS library -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google font-family link, which I used on the CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <!-- My website's CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Below is the link of "font awesome icons" to display the social media links, by writing the prefix of "fa" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Boostrap JS library-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- My website's general JavaScipt link-->
+    <script src="js/funtionality.js"></script>
+</head>  
+<body>
+<!-- below the top navegation code starts, which contains the current data and a search bard found on the form-->
+<header class="top-nav">
+    <div class="container"> 
+       <div class="date"></div> 
+           <form>
+                <div class="input-group">
+                    <input id="mySearch"  type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+    </div>   
+</header>
+<!-- Simple search bar in homepage (id=mySearch)-->
+<script>
+//   Below I have cretaed a function, which was 2 variables. Also if any values from targetNames are written on the search, the assigned address next to it will be opened.
+    function opener() {
+        var text = document.getElementById('mySearch').value;
+        var targetNames = {
+            potato : "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            muffin :"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            chicken : "http://doc.gold.ac.uk/~ahaqu002/webdev/cook_to_impress.html",
+            lamb: "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            cakes:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            pudding:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            lasagne:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            risotto:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            quiz:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            games:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            spices:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+            herbs:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+        };
+        if (text in targetNames) {
+            window.open(targetNames[text]);  
+        }
+    }
+    document.getElementById('mySearch').addEventListener('keyup', opener, false);
+</script>
+    
+<!-- Below starts the nav bar, where many used classes are pre-made in bootstrap -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <!-- Link Food World logo to home-->
+          <a href="index.html" data-toggle="tooltip" title="Home"><img src="img/food%20world.png" height="80" width="100" alt="Food World"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="text-nav">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+
+            <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+
+            <li class="dropdown">
+            <a href="recipes.html" class="dropdown-toggle newcolor" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="breakfast.html">Breakfast</a></li>
+                <li><a href="cook_to_impress.html">Cook to impress</a></li>
+                <li><a href="everyday_meals.html">Everyday meals</a></li>
+                <li><a href="deserts.html">Deserts</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="guide_spices.html">A guide to spices</a></li>
+            </ul>
+            </li>
+
+            <li><a href="interviews.html">articales</a></li>
+            <li><a href="quizzes.html">about</a></li>
+            <li><a href="cooking_tips.html">Call us</a></li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div>
+  </div> <!--/.container-fluid -->
+</nav>
+
+<!--Sroll up button-->
+<button onclick="topFunction()" id="topBtn" title="Go to top">Up</button> 
+<div class="container">
+     <div class="wrapper">
+        <h1>Welcome to Food World!</h1>
+         
+<!-- Images grid  with bootstrap row-->
+        <section class="main">
+          <div class="container grid-custom">
+            <div class="row">
+              <div class="col-sm-6 center-block">
+                  <a href="interviews.html"><img src="img/Interviews/jamie_oliver.jpg" alt="Jamie Oliver" class="img-responsive thumbnail "></a>
+                    <div class="carousel-caption">
+                        <h3>THIS MONTH'S EXLUSIVE INTERVIEW</h3>
+                        <p class="colour-p">JAMIE OLIVER "I did so bad at school, I had to prove myself at work"</p>
+                    </div>
+
+              </div>
+              <div class="row col-sm-6 center-block">
+                 <a href="guide_spices.html">
+                     <div class="col-xs-12">
+                        <img src="img/spices_guide.jpg" alt="Spices"  class="img-responsive thumbnail ">
+                     </div>
+                  </a>
+                  <div class="carousel-caption">
+                        <h3>GUIDE TO SPICES</h3>
+                        <p class="colour-p">Enhance the flavour of a basic dish to the maximun</p>
+                  </div>
+              </div>
+
+              <div class="row col-sm-6 center-block">
+
+                  <a href="cooking_tips.html">
+                      <div class="col-xs-12">
+                          <img src="img/Cooking_Tips/2_onion.jpg" alt="Chopping onions" class="img-responsive thumbnail">
+                      </div>
+                  </a>
+                  <div class="carousel-caption">
+                        <h3>THIS MONTH'S TOP KITCKEN TIPS</h3>
+                        <p class="colour-p">No more watery eyes whilst cutting onions</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--The newsletter-->
+        <section id="newsletter">
+            <div class="container">
+                <h2 class="subs">Subscribe to our Newletter</h2>
+                <form >
+                    <input type="email" placeholder="Enter email">
+                    <button type="submit" class="button_1"> Subscribe</button>     
+                </form>
+            </div>
+        </section>
+
+    </div>
+</div>  
+    
+<div class="container">
+    <div class="wrapper">
+        <div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li class="item1 active"></li>
+              <li class="item2"></li>
+              <li class="item3"></li>
+              <li class="item4"></li>
+            </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+              <div class="item active">
+                  <a href="cook_to_impress.html"> <img src="img/Recipes/apricot-glazed-chicken.jpg" alt="Apricot chicken" width="460" height="345"></a>
+                    <div class="carousel-caption">
+                          <h3>Apricot Glazed Chicken</h3>
+                          <p>Don't miss the most popluar recipe of the month!!!</p>
+                    </div>
+              </div>
+
+              <div class="item">
+                  <a href="cook_to_impress.html"><img src="img/Recipes/lamb-sticks-.jpg" alt="Lamb sticks" width="460" height="345"></a>
+                    <div class="carousel-caption">
+                          <h3>Lamb Sticks</h3>
+                          <p>This definetely seems to be a great starter on this festive season</p>
+                    </div>
+              </div>
+
+              <div class="item">
+                  <a href="cook_to_impress.html"><img src="img/Recipes/potato_courgette_frittata.jpg" alt="frittata" width="460" height="345"></a>
+                    <div class="carousel-caption">
+                          <h3>Potato and Courguette Frittata</h3>
+                          <p>A very healthy meal option for those on diet</p>
+                    </div>
+              </div>
+
+              <div class="item">
+                  <a href="deserts.html"><img src="img/Recipes/biscotti.jpg" alt="Biscotti" width="460" height="345"></a>
+                    <div class="carousel-caption">
+                          <h3>Biscotti</h3>
+                          <p>Impress your loved ones with this delecious desert!!!</p>
+                    </div>
+              </div>
+
+        </div>
+
+    <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>       
+    </div>
+</div>  
+ 
+<footer>
+<div class="container">
+
+    <div class="pull-left">
+        <p>Copyright &copy;2018 Food World. All rights reserved.</p>
+    </div>
+    
+    <div class="pull-right">
+        <p>Follow us on:</p>
+        <!-- social media icons imported from "font-awseome.min.css" library-->
+        <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/+googleplus" class="fa fa-google"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+        <a href="https://www.pinterest.co.uk/" class="fa fa-pinterest"></a>
+    </div>
+</div> 
+</footer>
+</body>
+</html>

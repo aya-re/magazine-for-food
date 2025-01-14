@@ -1,0 +1,684 @@
+body{
+    background-image: url(background.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+    color:black;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 16px;
+}
+p {
+  padding-left:10px;
+}
+/*I don't want the content to diplay on the backgorund image, so ,I'm creating a class which will have the bg colour white.*/
+.wrapper{
+    padding:1px;
+    background-color: #ffffff;
+    width: 100%;
+    margin: auto;
+} 
+h1 {   
+    color:#c32a2a;
+    margin-left: 5px;
+}
+/*-------Main navegation bar-----------------*/
+.navbar{
+    margin-bottom: 0;
+    background-color:white;
+    border: none; 
+}
+.text-nav{
+    padding-top: 10px;
+}
+/*changing the default bootstarp nav*/
+nav .navbar-header .navbar-toggle .icon-bar{
+    background-color: black;
+}
+ul.nav a:hover { 
+    color: #4f0536 !important;
+    background-color:#dd8c40 ;
+}
+ul .nav a{
+    color: aqua;
+} 
+li{
+    display: inline-block;
+    padding: 0 10px 0 20px;    
+}
+
+/*-------Top navegation bar-----------------*/
+.top-nav{
+    background-color: #4f0536;
+    color: #ffffff;
+    padding: 5px;
+}
+/*date on top-nav*/
+.date {
+  color: #ffffff;
+}
+
+.glyphicon-search{
+    font-size: 15px;
+}
+
+.btn-default{
+    background:#dd8c40;
+    width: auto;
+    height: 25px;
+}
+
+form .input-group .form-control{
+  height: 25px;
+}
+
+
+/*--------footer-----------------*/
+footer{
+    padding:7px;
+    color:#ffffff;
+    background-color: #4f0536;
+}
+ul.unstyled {
+    list-style-type: none;  
+}
+ul.unstyled li a {
+    color: white;  
+}
+.form-control{
+    padding: 5px;
+}
+/* footer-socail media hover*/
+.fa {
+  padding: 15px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  margin:2px;
+  border-radius: 100%;
+}
+/*the opacity of hovering on the icons*/
+.fa:hover {
+    opacity: 0.9;
+    color: #000000;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: #ffffff;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: #ffffff;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: #ffffff;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: #ffffff;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: #ffffff;
+}
+/*I want all the medial links to be in a single line, on mobile devices too*/
+@media all and (max-width: 680px) {
+  .fa {
+    color: cornsilk;
+    float: none;
+    margin: 0 3px 3px -3px;
+  }
+    
+}
+/*--------grid of 3 images- index----------*/
+.main {
+  margin:-5px ;
+}
+.main .img-responsive {
+  margin-bottom: 10px;
+}
+/* animation for the text */
+.colour-p{
+    color:#ffffff;
+    background-color:#989882;
+    font-weight: bolder;
+    animation-name: colour_p;
+    animation-duration: 15s;
+}
+
+@keyframes colour_p {
+    from {color: #FF00FF}
+    to {color: #0429e3;}    
+}
+/* For mobile phones: text should be smaller */
+@media (max-width: 576px) {
+
+    [class*="carousel-caption"] {
+    font-size: 10px;
+    }
+    
+    h3{
+        font-size: 15px;
+    }
+    [class*="col-xs-12"] {
+    width: 100%;
+    }
+}
+
+/*------carousel-----------*/
+ .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+  }
+/*------newsletter--------*/
+#newsletter{
+    padding: 15px;
+    color: #000000;
+    background: #e8491d;
+}
+#newsletter .subs{
+    color:blue;
+    
+}
+
+#newsletter form{
+ 
+    margin-top: 15px;
+}
+/*input type is email, so it request the @ sign if is absent on input*/
+#newsletter input[type="email"]{
+    padding:4px;
+    height: 25px;
+    width:70%;
+}
+.button_1{
+    height: 25px;
+    background-color: #26d04b;
+    border:none;
+    color: #ffffff;
+    animation-name: subscribe_btn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+}
+
+/* animation of subscribe button */
+@keyframes subscribe_btn {
+    from {background-color:  #26d04b;}
+    to {background-color:  #0429e3;}
+}
+
+/*------css image grid with pink hover effect, top interviews page------*/
+.row {
+	margin: 0;
+}
+
+.test_box {
+	padding: 0;
+}
+/*outside grid*/
+.test_box .inner {
+	display: block;
+	overflow: hidden;
+    margin: 10px;
+}
+.test_box .inner .test_click {
+	align-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,.1);
+	color: #ffffff;
+	display: flex;
+	flex-wrap: wrap;
+	height: 350px;
+	text-align: center;
+	text-decoration: none;
+	transition: all 150ms ease;
+}
+/*hovering/click for phones, colour*/
+.test_box .inner .test_click:hover {
+	background-color: rgba(100,20,20,.5); 
+	
+}
+/*itmes to be same length */
+.flex_this {
+	align-content: center;
+	display: inherit;
+	flex-wrap: inherit;
+	height: auto;
+	margin: 0;
+	padding: 10px;
+	transition: all 150ms ease;
+	width: 100%;
+
+}
+.test_box .inner .test_click:hover .flex_this {
+	margin-top: -5px;
+}
+/*title , name*/
+.test_title {
+	display: block;
+	font-weight: 600;
+	margin: 10 0 20px;
+	width: 100%;
+    text-transform: uppercase;
+}
+/*text in squre link*/
+.test_link {
+	border: 2px solid #fff;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	margin: 0 auto;
+	padding: 10px 30px;
+}
+/*picture 1*/
+.chef-01 .inner {
+	background-image: url('jamie_oliver.jpg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*picture 2*/
+.chef-02 .inner {
+	background-image: url('ayesha_curry.jpg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*picture 3*/
+.chef-03 .inner {
+	background-image: url('angela_hartnett.jpg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*to become single images block*/
+@media only screen and (max-width:680px) {
+  /* For mobile phones: */
+  [class*="test_box chef-01 col-xs-4 col-md-4"] {
+    width: 100%;
+    }
+    [class*="test_box chef-02 col-xs-4 col-md-4"] {
+    width: 100%;
+    }
+    [class*="test_box chef-03 col-xs-4 col-md-4"] {
+    width: 100%;
+    }
+}
+/* -------article - interviewspage, style start-------------------*/
+article {
+  max-width:60em;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:40px;
+  line-height:1.57;
+  font-size:16px;
+  font-family:sans-serif;
+  border-bottom: 2px solid #ddd;
+  color:#000000;
+}
+article img {
+  width:195px;
+  float:left;
+  margin:0 20px 20px 20px;
+}
+/*heading borders* spacings*/
+.heading-inter {
+  margin-top:20px;
+  margin-bottom:40px; 
+  border-bottom:3px dotted #dddddd;
+  padding-bottom:20px;
+}
+
+h2 {
+  font-size:30px;
+  margin:0;  
+  padding-left: 10px;
+  color:#c32a2a;
+}
+
+.day {
+  padding-left: 10px;
+}
+/*-by- style*/
+.author{
+  padding:0;
+  color:#000000;
+  font-style: italic;
+}
+
+article blockquote {
+  border-left:6px solid #c32a2a;
+  margin-bottom:10px;
+  background-color: #fafafa;
+}
+
+article cite {
+  font-weight:bolder;
+}
+/*quotes*/
+article q {
+  color:#362c2c;
+}
+
+/* ------Recipe cards with the modal ---------- */
+.card{
+    margin: 10px; 
+    background-color: #71f2c7;
+    } 
+.ingridients ul li {
+    display: block;
+    font-size: 16px;
+    list-style: none;
+    padding-left:-20px;
+    margin: 0 0 1rem 0;
+    }
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color:#a1380a;
+  color: white;
+}
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #a1380a;
+  color: white;
+}
+
+/* -------scroll up --------- */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:#dd8c40;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 1px;
+  border-radius: 3px;
+}
+#topBtn:hover {
+  background-color: #D3D3D3;
+}
+/* -------cooking tips page---------- */
+.cards {
+	position: relative;
+	width:47%;
+	padding-bottom:22%;
+	display:inline-block;
+	cursor: pointer;
+}
+/*position and size of cards*/
+.front, .back {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+    border: 3px solid black;
+}
+/*text on tip*/
+.par {
+    font-size:16px;
+    color: aliceblue;
+}
+
+.colour-h{
+    font-size:80px;
+}
+/*transition speed*/
+.front, .back {
+	-webkit-backface-visibility:hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.2s;
+	transition: transform 1s;
+}
+
+.back {background-color:#c32a2a;}
+/*rotation of Y style*/
+.front {background:#c32a2a;
+		-webkit-transform:rotateY(-180deg);
+		transform: rotateY(-180deg);}
+
+.cards:hover .back {
+		-webkit-transform:rotateY(-180deg);
+		transform:rotateY(-180deg);
+}
+
+.cards:hover .front {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(0);
+}
+/*images on card*/
+.cards img {
+    background-position:center;
+    background-repeat: none;
+    background-size: cover; 
+    width:100%;
+    height: 100%;
+}
+  /* For mobile phones */
+@media only screen and (max-width:680px) {
+  [class*="cards"] {
+    width: 100%;
+    height: 200px;
+    }
+  [class*="colour-h"]{
+    padding-bottom: 30px;
+    }
+}
+/*------comment section -cooking tips page---------*/
+/*clear ifself later*/
+.clearfix::after {
+  content: "";
+  display: table;
+  clear:both;
+}
+
+.commentbox-app {
+  color: #4a4a4a;
+  font-size: 16px;
+  padding-left: 2%;
+}
+
+.heading {
+    color: #2E2977;
+    border-left: 3px solid #2E2977;
+    line-height: 1.2;
+    padding-left: 2px;
+  }
+/* entire input space*/
+.comment-input,
+.comment-btn {
+    float: left;
+    display: inline-block;
+    height: 30px;
+  }
+/*comment entering space*/
+.comment-input {
+    appearance: none;
+    border: 0;
+    border-left: 3px solid transparent;
+    background-color: #EEE;
+    padding: 10px 10px 10px 32px;
+}
+/*posting button*/
+.comment-btn {
+    background-color: #efeef4;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 5px 12px;
+    line-height: 0.5;
+}
+/*displaying comments section*/
+.comment-stream {
+    padding: 0;
+    margin-top: 5px;
+    width: 90%;
+}
+/*individual li comments*/
+.comment-stream li{
+    border: 2px solid darkgrey;
+    background-color: #efeef4;
+    margin: 10px;
+    display: block;
+}  
+hr{
+    border-width: 3px;
+}
+
+/*-----Guide to spices--------*/
+.jumbotron {
+  background-image: url("spices banner.jpg");
+  background-size: cover;
+
+}
+.jumbotron h1{
+    color:navy;
+    font-weight: bolder;
+}
+
+/*--------Quizze Page------*/ 
+.qz{
+    font-size: 20px;
+    color: #783112;
+    font-weight: bolder;
+}
+#quiz_page .row .col-sm-6{
+    border: 5px solid #e3de6e;
+    margin-bottom: 5px;
+    background-color:#dddccb;
+}
+
+/*----foodQuiz page--*/
+ #foodIQ {
+      width:auto;
+      border:5px solid #836a73;
+      background:#fff;
+      padding:10px;
+      margin:50px;
+  }
+/*quiz image*/
+  img.question-image {
+      display:block;
+      max-width:550px;
+      margin:10px auto;
+      border:3px solid #ccc;
+      width:100%;
+      height:auto;
+  }
+/*options to pick answer*/
+  #choice-block {
+      display:block;
+      list-style:none;
+      margin:0;
+      padding:0;
+    
+  }
+/*submit*/
+  #submitbutton {
+      background:#836a73;
+  }
+  #submitbutton:hover {
+      background:#9c43ea;
+  }
+/*explanation with answer*/
+  #reason{
+      margin:0 auto;
+      padding:20px;
+      width:75%;
+  }
+  .choice-box {
+      display:block;
+      text-align:center;
+      margin:8px auto;
+      padding:10px 0;
+      border:1px solid #666;
+      cursor:pointer;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+  }
+/*recipeQuiz page*/
+ #recipeIQ {
+      width:auto;
+      border:4px solid #968ea1;
+      background:#fff;
+      padding:10px;
+      margin:50px;
+  }
+/*------general responsivness----*/
+/*make font smaller in samll devices*/
+@media (max-width: 479px){
+    h1{
+        font-size: 24px;
+    }
+}
+/* ------printing layout-------*/
+@media print { 
+
+    header, footer, nav{
+        display:none;   
+    }
+    img{
+      width: 170px;
+      height: 270px;
+    }
+    button, .btn {
+        display: none;
+    }
+    .btn-succes{
+            display:none;
+    }
+    body{
+        background-color: #ffffff;
+    }
+    #topBtn, #topBtn:hover{
+        display: none;
+    }
+    #newsletter, #inter-menu{
+        display: none;
+    }
+    
+    h1{
+        font-size: 16px;
+    }
+    h1, h2, h3 {
+        color: #000;
+    }
+    /* make  links  appear*/
+    a:after {
+        content:"<" attr(href)">";
+        color: #666;
+    }
+    .main img{
+        width: 500px;
+        height: 300px;
+        padding-left: 100px;
+    }
+    .colour-p{
+    color:#ffffff;
+    font-size: 12px;
+    font-weight: bolder;
+    }
+    div {
+        padding-bottom: 5px;
+        
+    }
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Breakfast | Food World</title>
+    <link rel="shortcut icon" type="image/png" href="img/food%20world.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is a magazine website about recipes and other related content">
+    <meta name="keywords" content="recipes, food quizzes, interviews of chefs, and cooking tips">
+    <meta name="author" content="Alba Haque Sultana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS library -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google font-family link, which I used on the CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <!-- My website's CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Below is the link of "font awesome icons" to display the social media links, by writing the prefix of "fa" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Boostrap JS library-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- My website's general JavaScipt link-->
+    <script src="js/funtionality.js"></script>
+</head>
+    
+<body>
+<!-- below the top navegation code starts, which contains the current data and a search bard found on the form-->
+<header class="top-nav">
+    <div class="container"> 
+       <div class="date"></div> 
+           <form>
+                <div class="input-group">
+                    <input id="mySearch"  type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+    </div>   
+</header>
+<!-- Below starts the nav bar, where many used classes are pre-made in bootstrap -->   
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a href="index.html" data-toggle="tooltip" title="Home"><img src="img/food%20world.png" height="80" width="100" alt="Food World"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="text-nav">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          
+        <li><a href="index.html">Home</a></li>
+          
+        <li class="dropdown active">
+          <a href="recipes.html" class="dropdown-toggle newcolor" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes<span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="breakfast.html">Breakfast</a></li>
+            <li><a href="cook_to_impress.html">Cook to impress</a></li>
+            <li><a href="everyday_meals.html">Everyday meals</a></li>
+            <li><a href="deserts.html">Deserts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="guide_spices.html">A guide to spices</a></li>
+          </ul>
+        </li>
+          
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="cooking_tips.html">Cooking tips</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+    </div>
+  </div> <!--/.container-fluid -->
+</nav>
+<!--Sroll up button-->
+<button onclick="topFunction()" id="topBtn" title="Go to top">Up</button> 
+<!--Breakfast recipe  cards with modal inside dipsplaying the recipes-->
+ <div class="container">
+     <div class="wrapper">
+        <h1>Breakfast</h1>
+         <!-- the frist row which will have 2 coloumns in destkops-->
+         <div class="row">
+            <div class="col-md col-sm-6">
+                <!--I will be using the build-in card class in bootstrap to display a card format-->
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/potato_courgette_frittata.jpg" alt="potato and Courgette Frittata" class="img-responsive">
+                  <div class="card-title">
+                    <h3>Potato and Courgette Frittata</h3>
+                  </div>
+                  <div class="card-text">
+                      <p>A savoury breakfast recipe of a traditional frittata, with a healthier twist containing courgette and feta cheese.</p>
+                      
+                      
+                      
+                   <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal1">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel1">Potato and Courgette Frittata</h4>
+                          </div>
+                         <!-- recipe ingredients in modal-->
+                          <div class="modal-body">
+                              <aside>
+                             <div class="ingridients"> 
+                              <h3>Ingredients:</h3>
+                                <ul>
+                                   <li> 1 small russet potato, peeled and cut into 1/2-inch cubes,</li>
+                                    <li>4 large eggs,</li>
+                                    <li>2 egg whites,</li>
+                                    <li>2 tablespoons coarsely chopped fresh 
+                                     coriander leaves,<li>
+                                    <li>3/4 teaspoon salt,</li>
+                                    <li>1/4 teaspoon hot sauce,</li>
+                                    <li>1 tablespoon olive oil,</li>
+                                    <li> 1 garlic clove, minced</li>
+                                    <li>1 small onion, finely chopped,</li>
+                                    <li> 1 small courgette, grated and squeezed dry in clean kitchen towel,</li>
+                                    <li> 90g queso fresco or feta cheese,</li>
+                                    <li> 2 strips cooked crumbled turkey bacon, optional.</li>
+                                </ul>
+                                </div>
+                                </aside>
+                              <!-- recipe preparation method in modal-->
+                              <article>
+                                <h3>Method:</h3>
+                                <p>1-Bring the potatoes with enough cold water to cover to a boil in a small saucepan. Cook, over medium-high heat, until the potatoes are tender, 6 to 8 minutes; drain and pat dry.
+                                Whisk together the eggs, egg whites, coriander, salt, and hot sauce in a large bowl.</p>
+                                <p>2-Preheat the grill to medium-high.
+                                Heat the oil in a medium (10-inch) ovenproof nonstick pan over medium-high heat. Add the garlic and onion and cook, stirring occasionally, until the onion is translucent, 2 minutes.</p>
+                                <p>3-Add courgette and cook until tender, about 6 minutes more. Add the cooked potatoes and cook, stirring occasionally, until the potatoes begin to brown slightly, about 4 minutes more.</p>
+                                <p>4-Evenly pour the egg mixture over the vegetable mixture. Cook, over medium heat, tilting the pan and lifting the edges with a rubber spatula to let the uncooked egg flow underneath. Sprinkle with the cheese and the bacon, if using.</p>
+                                <p>5-Broil, 5 to 7 inches from the heat, until the eggs puff and are just set and the cheese is golden brown, about 5 minutes. Remove carefully to a plate, or serve in wedges directly from the pan.
+                                </p>
+                            </article>
+                          </div>
+                            <!--modal footer-->
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- modal ends-->
+                      
+                  </div>
+                 <br>
+              </div>  
+             </div>
+            </div>
+            
+            <div class="col-md col-sm-6">
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/courgette_hash_browns_eggs.jpg" alt="Courgette Hash Browns and Eggs" class="img-responsive ">
+                  <div class="card-title">
+                    <h3>Courgette Hash Browns and Eggs</h3>
+                  
+                  </div>
+                  <div class="card-text">
+                      <p>Easy to prepare and delicious harsh browns with an intense flavour of minced parsley and reasted red pepper.</p>
+                      <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal2">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel2">Courgette Hash Browns and Eggs</h4>
+                          </div>
+                          <div class="modal-body">
+
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>1 1/2 tablespoons extra-virgin olive oil</li>
+                                    <li>1 medium onion, diced</li>
+                                    <li>2 teaspoons finely chopped fresh sage</li>
+                                    <li>1 large clove garlic, minced</li>
+                                    <li>1 small jalapeno pepper, minced with some seeds</li>
+                                    <li>3 large courgettes or yellow summer squash, cut into 1/2-inch pieces</li>
+                                    <li>2 teaspoons white wine vinegar</li>
+                                    <li>Salt and freshly ground black pepper</li>
+                                    <li> 1/4 cup chopped roasted red pepper</li>
+                                    <li>1/4 cup chopped fresh parsley or coriander</li>
+                                    <li>8 large eggs</li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>1-Heat the oil in a large nonstick skillet over medium-high heat. Add the onions and cook, stirring, until soft and lightly browned, about 6 minutes. Add the sage, garlic and jalapenos and cook, stirring, until fragrant, about 30 seconds. </p>
+                            <p>2-Add the courgettes, vinegar, 3/4 teaspoon salt and a few grinds of pepper and stir to combine. Cover and cook, stirring occasionally, until the squash begins to soften, 6 to 8 minutes. Uncover and add the red pepper and half of the parsley. Cook until the squash is completely soft and lightly brown, 6 to 8 minutes more. Remove from the heat.</p>
+                            <p>3-Make 8 small indentations in the squash with a measuring cup or the back of a ladle. Crack the eggs into the indentations and sprinkle with salt and pepper. Return the pan to medium heat, cover and cook until the egg whites are set and the yolks are still runny, about 4 minutes.Sprinkle with the remaining parsley and serve.
+                            </p>
+                        </article>
+                        </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                    <!-- modal ends-->    
+                  </div>
+                  <br> 
+              </div>  
+             </div>  
+            </div>
+         </div>
+
+         <!-- the second row which will have 2 coloumns in destkops-->
+        <div class="row">
+            <div class="col-md col-sm-6">
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/muffins.jpg" alt="breakfast muffins" class="img-responsive ">
+                  <div class="card-title">
+                    <h3>Breakfast muffins</h3>
+                  
+                  </div>
+                  <div class="card-text">
+                      <p>A very healthy sweet breakfast muffin with mixed seeds, bananas and blueberries. It's great to bake in advance, and refrigerate.</p>
+                      <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal3">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel3">Breakfast muffins</h4>
+                          </div>
+                          <div class="modal-body">
+
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>2 large eggs</li>
+                                    <li>150ml pot natural low-fat yogurt</li>
+                                    <li>50ml rapeseed oil</li>
+                                    <li>100g apple sauce or pureed apples (find with the baby food)</li>
+                                    <li>1 ripe banana, mashed</li>
+                                    <li>4 tbsp clear honey</li>
+                                    <li>1 tsp vanilla extract</li>
+                                    <li>200g wholemeal flour</li>
+                                    <li>50g rolled oats, plus extra for sprinkling</li>
+                                    <li> 1½ tsp baking powder</li>
+                                    <li> 1½ tsp bicarbonate of soda</li>
+                                    <li>1½ tsp cinnamon</li>
+                                    <li>100g blueberry</li>
+                                    <li> 2 tbsp mixed seed (we used
+                                    </li> 
+                                    <li>pumpkin, sunflower and flaxseed)</li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>1-Heat oven to 180C/160C fan/gas 4. Line a 12-hole muffin tin with 12 large muffin cases. In a jug, mix the eggs, yogurt, oil, apple sauce, banana, honey and vanilla. Tip the remaining ingredients, except the seeds, into a large bowl, add a pinch of salt and mix to combine. </p>
+                            <p>2-Pour the wet ingredients into the dry and mix briefly until you have a smooth batter – don’t overmix as this will make the muffins heavy. Divide the batter between the cases. Sprinkle the muffins with the extra oats and the seeds. </p>
+                            <p>3-Bake for 25-30 mins until golden and well risen, and a skewer inserted into the centre of a muffin comes out clean. Remove from the oven, transfer to a wire rack and leave to cool. Can be stored in a sealed container for up to 3 days.</p>
+                        </article>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                       </div>
+                    </div>
+                 </div>
+                    <!-- modal ends-->    
+                </div>
+                  <br>
+              </div>  
+             </div>  
+            </div>
+             
+            <div class="col-md col-sm-6">
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/matcha_breakfast_bowl.jpg" alt="Matcha breakfast bowl" class="img-responsive ">
+                  <div class="card-title">
+                    <h3>Matcha breakfast bowl</h3>
+                  
+                  </div>
+                  <div class="card-text">
+                      <p>A all in one yougurt and fruit bowl, best when in a hurry but you still want to have a healthy breakfast.</p>
+                      <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal4">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModal4">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel4">Matcha breakfast bowl</h4>
+                          </div>
+                          <div class="modal-body">
+
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>300g natural yogurt</li>
+                                    <li>1 tbsp matcha powder</li>
+                                    <li>2 tsp maple syrup</li>
+                                    <li>1 kiwi fruit, sliced</li>
+                                    <li> 1 peach, sliced</li>
+                                    <li>100g blueberries</li>
+                                    <li>20g coconut flakes, toasted</li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>Mix the yogurt with the matcha and maple syrup, and divide between two bowls. Top with the kiwi, peach and blueberries. Sprinkle over the coconut flakes just before serving.</p>
+                        </article>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                       </div>
+                    </div>
+                 </div>
+                    <!-- modal ends--> 
+
+                  </div>
+                  <br>
+              </div>  
+             </div>  
+            </div>
+         </div>
+        </div>        
+    </div> 
+<!--footer-->
+ 
+<footer>
+<div class="container">
+
+    <div class="pull-left">
+        <p>Copyright &copy;2018 Food World. All rights reserved.</p>
+    </div>
+    
+    <div class="pull-right">
+        <p>Follow us on:</p>
+        <!-- social media icons imported from "font-awseome.min.css" library-->
+        <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/+googleplus" class="fa fa-google"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+        <a href="https://www.pinterest.co.uk/" class="fa fa-pinterest"></a>
+    </div>
+</div> 
+</footer>   
+</body>
+</html>

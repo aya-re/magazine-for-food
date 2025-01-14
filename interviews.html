@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Interviews | Food World</title>
+    <link rel="shortcut icon" type="image/png" href="img/food%20world.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is a magazine website about recipes and other related content">
+    <meta name="keywords" content="recipes, food quizzes, interviews of chefs, and cooking tips">
+    <meta name="author" content="Alba Haque Sultana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS library -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google font-family link, which I used on the CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <!-- My website's CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Below is the link of "font awesome icons" to display the social media links, by writing the prefix of "fa" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Boostrap JS library-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- My website's general JavaScipt link-->
+    <script src="js/funtionality.js"></script>
+
+  </head>
+<body>
+<!-- below the top navegation code starts, which contains the current data and a search bard found on the form-->
+<header class="top-nav">
+    <div class="container"> 
+       <div class="date"></div> 
+           <form>
+                <div class="input-group">
+                    <input id="mySearch"  type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+    </div>   
+</header>
+<script>
+//   Below I have cretaed a function, which was 2 variables. Also if any values from targetNames are written on the search, the assigned address next to it will be opened.
+    function opener() {
+        var text = document.getElementById('mySearch').value;
+        var targetNames = {
+            potato : "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            muffin :"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            chicken : "http://doc.gold.ac.uk/~ahaqu002/webdev/cook_to_impress.html",
+            lamb: "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            cakes:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            pudding:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            lasagne:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            risotto:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            quiz:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            games:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            spices:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+            herbs:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+        };
+        if (text in targetNames) {
+            window.open(targetNames[text]);  
+        }
+    }
+    document.getElementById('mySearch').addEventListener('keyup', opener, false);
+</script>  
+<!-- Below starts the nav bar, where many used classes are pre-made in bootstrap -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a href="index.html" data-toggle="tooltip" title="Home"><img src="img/food%20world.png" height="80" width="100" alt="Food World"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="text-nav">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="recipes.html" class="dropdown-toggle newcolor" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="breakfast.html">Breakfast</a></li>
+            <li><a href="cook_to_impress.html">Cook to impress</a></li>
+            <li><a href="everyday_meals.html">Everyday meals</a></li>
+            <li><a href="deserts.html">Deserts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="guide_spices.html">A guide to spices</a></li>
+          </ul>
+        </li>
+        <li class="active"><a href="interviews.html" class="color-me" >Interviews <span class="sr-only">(current)</span></a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="cooking_tips.html">Cooking tips</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+      </div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!--Sroll up button-->
+<button onclick="topFunction()" id="topBtn" title="Go to top">Up</button> 
+ <div class="container">
+     <div class="wrapper">
+        <h1>Interviews</h1>
+        <p>Don't miss out on reading this month's exclusive interviews.</p>
+        <div class="row">
+        <section id="inter-menu">
+   <!--Grid to select a chef interview-->
+            <div class="test_box chef-01 col-xs-4 col-md-4">
+                <div class="inner">
+                    <a href="#jamie" class="test_click">
+                        <div class="flex_this">
+                            <h2 class="test_title">Jamie Oliver</h2>
+                            <span class="test_link">"I did so so badly at school, I had to prove myself at work"</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="test_box chef-02 col-xs-4 col-md-4">
+                <div class="inner">
+                    <a href="#ayesha" class="test_click">
+                        <div class="flex_this">
+                            <h2 class="test_title">Ayesha Curry</h2>
+                            <span class="test_link">"There is no formula to finding a balance between career and motherhood."</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="test_box chef-03 col-xs-4 col-md-4">
+                <div class="inner">
+                    <a href="#angela" class="test_click">
+                        <div class="flex_this">
+                            <h2 class="test_title">Angela Harnett</h2>
+                            <span class="test_link">"I'm always nervous about cooking, as you strive to get it right every time – but you can always do better. "</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+         </section>
+        </div>
+        <!--The newsletter-->
+        <section id="newsletter">
+            <div class="container">
+                <h2 class="subs">Subscribe to our Newletter</h2>
+                <form >
+                    <input type="email" placeholder="Enter email">
+                    <button type="submit" class="button_1"> Subscribe</button>     
+                </form>
+            </div>
+        </section>
+        <br>  
+    </div>
+</div>
+
+<!--All interviews  ARTICLES-->
+ <div class="container">
+     <div class="wrapper">
+     <!--Jamie's interview-->
+        <article>
+        <div class="heading-inter">
+            <h2 id="jamie">Jamie Oliver</h2>
+            <!--pull-left and pull-right are bootstrap classes which align elemts to left or right.-->
+            <div class="pull-right">
+                <p><span class="author">by</span> Danyal H. Shariff</p>
+            </div>
+            <div class="pull-left">
+                <p class="pull-right day">03/12/2018</p>
+            </div>
+        </div>
+        <!--thumnail bootstrap class styles images as a thumbnail-->
+        <img src="img/Interviews/jamie_oliver.jpg" class="thumbnail" alt="jamie oliver"/>
+
+        <p> Waiting to interview Jamie Oliver is a surreal experience. I’m standing in his Cornish restaurant Fifteen,  preparing for Oliver’s helicopter to arrive from his home in north London.
+        </p>
+
+        <p>It’s easy to be cynical about Oliver. The 40-year-old chef has a fortune worth an estimated £240m, and fingers in so many pies he could do with a few extra limbs. There are the television shows, the books, the restaurants, the cookery schools, and the endless merchandise (want a Jamie Oliver-branded potato masher? It’s yours for £14).</p>
+
+        <p>Oliver set up the first Fifteen when he was just 25. It was born, he says wryly, out of “the nuttiness of the One Direction-Naked Chef era” - when his first TV show and book, The Naked Chef exploded almost overnight, transforming the cheeky chappy from Essex into a millionaire (not to mention the number one crush of housewives from Folkestone to Fife).</p>
+
+        <p><q>I just wanted to do it,</q> he explains. <q>I had money in the bank account. I did it contrary to all my family’s advice and my accountant going 'don’t do it, 'don’t do it!’ My old man was really against it - he thought that you couldn’t turn a silk purse out of a sow’s ear.</q></p>
+
+        <p><q>We were bankrupt for about three weeks and luckily I got myself out of the sh** but it could have gone pear-shaped. It was totally naive but that’s the magic, isn’t it - the fine line between being a young nutter and being a middle-aged, too-conservative grump.</q></p>
+
+        <blockquote>
+        I did so so badly at school, I had to prove myself at work.
+        <cite>Jamie Oliver</cite>
+        </blockquote>
+        <p>Is it the achievement he’s most proud of? <q>I think it has to be,</q> he says. <q>I always feel that Fifteen as a company keeps us honest. And I think it keeps us in touch with young people, people who have had misfortunes</q>. 
+        </p>
+
+        <img src="img/Interviews/jamieO2.jpeg" class="thumbnail pull-right" alt="sugary drink">
+
+        <p>Young people are a particular passion for Oliver. They’re often at the heart of his relentless  campaigning, be it against school dinners or sugary drinks - schemes that are undoubtedly well-intentioned, but invariably provoke accusations of preaching or bullying (As The Telegraph’s own sketchwriter Michael Deacon joked earlier this year: <q>I’m pitching a TV series to Channel 4. Entitled Jamie Knows Best, the series follows Jamie Oliver as he inspects each of the UK’s 18 million families in turn, to demonstrate how far the nation’s parenting abilities fall short of his exacting standards.</q>)</p>
+        <blockquote>
+        What no one tells you when you’re young is to just let time do  its work. It gives you this incredible ability to go on a  journey.
+        <cite>Jamie Oliver</cite>
+        </blockquote>
+        <p>Why has he always pushed himself so hard? <q>I think I had a lot to prove,</q> he says thoughtfully. <q>I did so, so badly at school, I had to prove myself at work. Even though some people think I’m a middle class kid from a private school background, I’m, not. My dad had nothing and I worked in a family business so it couldn’t be more opposite.</q></p>
+        <p>His father’s pub in Essex is to this day, he say, <q>my litmus - it’s what sets the tone for my work. British pubs are the most democratic places. I grew up being friends with gypsies, pensioners, city boys, farmers, village idiots. If you really love people - and I definitely do - I always try and turn things around, and think, what would that feel like?</q>
+        </p>
+        <p>Would his younger self be surprised by the person he is today? He nods. <q>I’ve no idea how I’ve got here. I absolutely did not plan to be where I am today. But what no one tells you when you’re young is to just let time do its work. It gives you this incredible ability to go on a journey.</q></p>
+
+        <p>It’s a sentiment many of the graduates gathered around him probably would agree with.</p>   
+
+        </article>
+         <br>
+         
+        <!--Ayesha Curry interview-->
+        <article>
+        <div class="heading-inter">
+            <h2 id="ayesha">Ayesha Curry</h2>
+            <div class="pull-right">
+                <p><span class="author">by</span> Maria Sanchez</p>
+            </div>
+            <div class="pull-left">
+                    <p class="pull-right day">05/12/2018</p>
+            </div>
+        </div>
+
+        <img src="img/Interviews/ayesha_curry.jpg" class="thumbnail" alt="ayesha curry">
+
+        <p>Founder of Homemade, Host of Ayesha’s Home Kitchen on Food Network, New York Times Bestselling Author of The Seasoned Life
+        Entrepreneur, author, chef, mother, wife of NBA superstar Stephen Curry: it is impossible to define Ayesha Curry.</p>
+
+        <p>Her passions and talents have led to successes in countless different roles. Curry kindly welcomed us into her San Francisco Bay Area home during the filming of her recently premiered Food Network show, Ayesha’s Home Kitchen. Her warmth, sincerity and strength were undeniable, and we couldn’t help but feel inspired by her philosophy on family, food, and her newest business venture, Homemade.</p>
+        <p>The concept for Homemade, a meal kit company with family-inspired ingredients and recipes that have been hand-chosen by Curry herself, was fueled by the belief that the lifestyle of the modern mom is becoming increasingly demanding. The same way that we design for the busy contemporary woman, Homemade was created to alleviate meal-planning time to allow families more time for the significant moments in life. In our interview, Curry reflects on food and its ability to bring families together in profound ways, everyday.</p>
+        <!-- the q tag makes the text inside it appear like a quote, with quotation marks-->
+        <p>On family and food, <q>Many of my fondest memories revolve around food. The time I spent in the kitchen with my mother and my grandmother are moments I'll cherish. It inspires me to bring my girls into the kitchen to make memories of our own. Knowing what a profound impact that connection has had on my life, it's devastating that mealtime has lost its importance over the years. Helping to make it easier for families to get back around the table, and spend time together, is at the center of everything I do professionally.</q>
+        </p>
+
+        <img src="img/Interviews/ayeshaC1.jpeg" class="pull-right thumbnail" alt="ayesha curry's meal kit">
+
+        <p>On being an entrepreneur <q>I want to inspire people to love food and create memories with the ones they love. Like many other young parents, I am just doing my best to grow each day.</q></p>
+        <p>
+        <p>Why a meal kit company? <q>As schedules fill up, a home cooked meal is usually the first thing sacrificed. My husband and I both have very demanding schedules, and as my kids get older, their days fill up with practices and play dates. It's difficult enough just to get a meal on the table, let alone one that is nutritious and something your family will actually enjoy. </q> </p>
+
+        <blockquote>
+        And if my experiences can help other people on their path to living their best life, I’m thrilled to be a part of that journey. I feel very grateful to have the platform to be able to have that kind of impact.
+          <cite>Ayesha Curry</cite>
+        </blockquote>
+
+        <p><q>Since I couldn't find a meal kit that worked for me, I created it! Homemade has meals that are approachable but don’t lack in flavor and excitement. It has extras like coloring books, to keep little hands busy while the meal gets prepared. I made small tweaks that made it a fit for my busy family, knowing that a lot of other people will find it a fit for their busy families, as well.</q></p>
+        <blockquote>
+        There is no formula to finding a balance between career and motherhood.
+          <cite>Ayesha Curry</cite>
+        </blockquote>
+
+        <p>The secret to finding balance as a mother: <q>There is no formula to finding a balance between career and motherhood. The “mom guilt” is real, but you just do your best to be present and make sure your kids always feel supported. When I’m on the road and missing home, I find some resolve in the fact that I’m setting a strong example for my daughters, showing them that with enough hard work and perseverance they are capable of anything. </q> </p>
+
+        </article>
+        <br>
+         
+        <!--Angela Harnett interview-->
+        <article>
+        <div class="heading-inter">
+            <h2 id="angela">Angela Hartnett</h2>
+            <div class="pull-right">
+                <p><span class="author">by</span> Tim W. Mathews</p>
+            </div>
+            <div class="pull-left">
+                <p class="pull-right day">01/12/2018</p>
+            </div>
+        </div>
+
+        <p>Born in Kent of Welsh, Irish and Italian heritage, Angela Hartnett, 46, found fame as a protégée of Gordon Ramsay. Holding a degree in history, she came to cooking relatively late, learning on the job at a hotel in Cambridge. Undertaking a one-day trial at Ramsay’s first restaurant, Aubergine, also alongside Marcus Wareing, she impressed and worked her way up to run the Connaught, winning her first Michelin star in 2004. Her sixth restaurant, Cafe Murano, in Covent Garden, opens on 29 June.</p>
+        <p>
+
+        <img src="img/Interviews/AngelaH1.jpeg" class="thumbnail" alt="Angela Harnett"/>
+
+        <p>I saw on Twitter that you recently went away with fellow chefs Russell Norman and Mark Hix. Did all the conversation revolve around food?
+        <q>No! It's mates away, not foodies. We talk about loads of stuff but naturally food and wine are part of it.</q>
+        </p>
+        <p>So what was the best thing you ate while the three of you were off on your travels?
+        <q>When we were in France we came across some delicious razor clams and salt cod fritters. Plus a fab veal tartare.</q>
+        </p>
+
+        <p>What's your pet hate in restaurants?
+        <q>Rudeness. Insincere service. Restaurants that make it difficult to book but then when you arrive, they are half-empty. But it's a hard business so I always try to be understanding. I will forgive almost anything.</q>
+        </p>
+
+        <blockquote>
+        I'm always nervous about cooking, as you strive to get it right every time – but you can always do better.
+          <cite>Angela Harnett</cite>
+        </blockquote> 
+
+        <p>When was the last time you got nervous cooking for someone?
+        <q>I'm always nervous about cooking, as you strive to get it right every time – but you can always do better. The beauty of this job is that it's never static. The most critical people I cook for are my family – they know me the best.</q>
+        </p>
+
+        <p>When was the last time you messed up in the kitchen?
+        <q>I'm not sure really. I made a dodgy queen of puddings recently because I rushed it. And I messed up my pastry at the BBC Good Food Show – but the tart still worked.</q>
+        </p>
+
+        <p>You started in kitchens quite late in life, yet have achieved great success. To what do you attribute this?
+        <q>Working hard and being consistent. Plus, I have been lucky with being in the right place at the right time. And enjoying it. But anyway, who knows how to define success – I find that awkward.</q>
+        </p>
+
+        </article>
+   
+     </div>
+ </div>
+<!--footer-->     
+<footer>
+<div class="container">
+
+    <div class="pull-left">
+        <p>Copyright &copy;2018 Food World. All rights reserved.</p>
+    </div>
+    
+    <div class="pull-right">
+        <p>Follow us on:</p>
+        <!-- social media icons imported from "font-awseome.min.css" library-->
+        <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/+googleplus" class="fa fa-google"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+        <a href="https://www.pinterest.co.uk/" class="fa fa-pinterest"></a>
+    </div>
+</div> 
+</footer>
+</body>
+</html>

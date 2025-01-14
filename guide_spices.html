@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic spice guide | Food World</title>
+    <link rel="shortcut icon" type="image/png" href="img/food%20world.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is a magazine website about recipes and other related content">
+    <meta name="keywords" content="recipes, food quizzes, interviews of chefs, and cooking tips">
+    <meta name="author" content="Alba Haque Sultana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS library -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google font-family link, which I used on the CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <!-- My website's CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Below is the link of "font awesome icons" to display the social media links, by writing the prefix of "fa" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- javaScript files-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/funtionality.js"></script>
+</head>
+    
+<body>
+<header class="top-nav">
+    <div class="container"> 
+       <div class="date"></div> 
+           <form>
+            <div class="input-group">
+                <input id="mySearch"  type="text" class="form-control" placeholder="Search">
+                <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                <i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>   
+</header>
+<script>
+//   Below I have cretaed a function, which was 2 variables. Also if any values from targetNames are written on the search, the assigned address next to it will be opened.
+    function opener() {
+        var text = document.getElementById('mySearch').value;
+        var targetNames = {
+            potato : "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            muffin :"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            chicken : "http://doc.gold.ac.uk/~ahaqu002/webdev/cook_to_impress.html",
+            lamb: "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            cakes:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            pudding:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            lasagne:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            risotto:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            quiz:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            games:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            spices:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+            herbs:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+        };
+        if (text in targetNames) {
+            window.open(targetNames[text]);  
+        }
+    }
+    document.getElementById('mySearch').addEventListener('keyup', opener, false);
+</script>
+<!--navegation-->    
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a href="index.html" data-toggle="tooltip" title="Home"><img src="img/food%20world.png" height="80" width="100" alt="Food World"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="text-nav">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          
+        <li><a href="index.html">Home</a></li>
+          
+        <li class="dropdown active">
+          <a href="recipes.html" class="dropdown-toggle newcolor" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes<span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="breakfast.html">Breakfast</a></li>
+            <li><a href="cook_to_impress.html">Cook to impress</a></li>
+            <li><a href="everyday_meals.html">Everyday meals</a></li>
+            <li><a href="deserts.html">Deserts</a></li>
+            <li role="separator" class="divider"></li>
+             
+            <li><a href="#">A guide to spices</a></li>
+          </ul>
+        </li>
+          
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="cooking_tips.html">Cooking tips</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+    </div>
+  </div> <!--/.container-fluid -->
+</nav>
+<!--scroll up-->
+<button onclick="topFunction()" id="topBtn" title="Go to top">Up</button> 
+<!-- jumbotron to showcase topic and article-->
+<div class="wrapper">
+    <div class="jumbotron jumbotron-fluid img-responsive">
+        <div class=" text-center">
+            <h1>A BASIC GUIDE OF HERBS AND SPICES</h1>
+        </div>
+    </div>
+</div> 
+     
+<div class="container">
+  <div class="wrapper">
+    <article id="guide">
+    <p class="lead">Seasonings are packed with nutrients and offer great health benefits, as most were previously and continue to be used in alternative medicine. From allspice to turmeric, discover 12 different spices and herbs and how to use them!</p>
+
+    <div class="row">
+        <div class="col-md-4">    
+            <h2>1. Allspice </h2>
+            <img src="img/Guide_Spices/allspice.jpg" class="img-responsive" alt="allspice"/>
+        </div>
+        <div class="col-md-8">
+            <p>Allspice resembles the flavors of cinnamon, cloves, nutmeg, and pepper. Used in its ground or whole form, allspice flavors both desserts and savory dishes, along with being a key ingredient in spiced cider and Jamaican jerk chicken. </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">    
+            <h2>2. Basil </h2>
+            <p>Exuding a sweet and earthy aroma, basil is one of the most commonly used herbs in the kitchen. Also offering its flavorful appearance in pesto, the herb pairs well with a number of meat dishes, vegetables, and soups. </p>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">   
+        <h2>3. Cardamom</h2>
+        <img src="img/Guide_Spices/cardamon.jpeg" class="img-responsive" alt="cardamom">
+      </div>
+      <div class="col-sm-8">
+          <p>Cardamom is a spice described as strong and pungent, with light notes of lemon and mint. For the freshest flavor, purchase whole cardamom pods over ground to preserve the natural essential oils.</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">    
+            <h2>4. Cayenne Pepper </h2>
+            <p>Coming from a hot chili pepper, cayenne pepper offers spice to a number of dishes. From honey sesame fish tacos to Cajun pretzels, there's lots ofthings you can make with cayenne pepper.</p>
+        </div>
+    </div>
+    <br>
+   
+    <div class="row">
+      <div class="col-sm-4">   
+        <h2>5. Cilantro </h2>
+        <img src="img/Guide_Spices/cilantro.jpeg" class="img-responsive" alt="cilantro">
+      </div>
+      <div class="col-sm-8">
+        <p> You may either love it or hate it, as evolving research suggests the genes you were born with can dictate the flavor you perceive from cilantro. While some attribute to the taste of soup, others who enjoy it describe it as a mild tasting parsley with a citrus zest. The delicate leaves should be consumed raw or added to the end of cooking, pairing well with Mexican dishes, fish, or soups and salads. </p>
+        </div>
+    </div>
+        
+    <div class="row">
+        <div class="col-md-12">    
+            <h2> 6. Cinnamon</h2>
+            <p>  Described as woody and sweet, cinnamon is mostly known for its warm contribution in a number of spiced desserts and breakfast items, including french toasts and pancakes with cinnamon. However, cinnamon can also serve double duty in savory dishes in braised dishes and soups  </p>
+        </div>
+    </div>    
+    <br>
+        
+    <div class="row">
+      <div class="col-sm-4">   
+        <h2>7. Chives </h2>
+        <img src="img/Guide_Spices/chives.jpeg" class="img-responsive" alt="chives">
+      </div>
+      <div class="col-sm-8">
+        <p>Kin to garlic, shallot, leek, and scallion, chives oftentimes get mistaken for green onions and scallions. Chives differ based on their extremely slender, hallow stalk though they similarly also garnish fresh green salads, baked potatoes, creamy potato salad, devilled eggs, and can be added into butters, vinegars, and sauces for added flavour depth.</p>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">    
+            <h2>8. Cloves </h2>
+            <p>Cloves offer an aromatic flavour to a number of dishes, including to enhance meats, curries, marinades, along with apples and pears. The spice in Europe is mostly known for its use in pumpkin pies, but in Asia is a common spice to be used in meat curries.  </p>
+        </div>
+    </div> 
+    <br>
+               
+    <div class="row">
+      <div class="col-sm-4">   
+        <h2>9. Cumin </h2>
+        <img src="img/Guide_Spices/cumin.jpeg" class="img-responsive" alt="cumin">
+      </div>
+      <div class="col-sm-8">
+        <p>Either prepared with its whole or grounded form, cumin is a flowering plant with the seeds added to cuisines. The nutty flavour is widely used in curry recipes, as curry powder mostly consists of curry leaves, coriander, turmeric, and cumin.</p>
+      </div>
+    </div>
+        
+    <div class="row">
+        <div class="col-md-12">    
+            <h2>10. Dill </h2>
+            <p>The feathering green leaves are commonly used in soups, stews, and for pickling hence “dill pickles.” There are countless ways that dill could be used, including grilled carrots with lemon and dill, zucchini with yogurt-dill sauce, and golden quinoa salad with lemon, dill, and avocado! </p>
+        </div>
+    </div>      
+    <br>
+        
+    <div class="row">
+      <div class="col-sm-4">   
+            <h2>11. Garlic </h2>
+            <img src="img/Guide_Spices/garlic.jpg" class="img-responsive" alt="garlic">
+      </div>
+      <div class="col-sm-8">
+         <p>From powdered garlic used to flavor grilled chicken with roasted garlic velouté sauce to the whole garlic head in these roasted garlic hummus in cucumber cups, the pungent and strong flavors of garlic offer bold flavors to numerous dishes.</p>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">    
+             <h2>12. Ginger </h2>
+             <p>The root or stem of the ginger plant is often consumed fresh, dried, and in its oil or powdered form. The pungent and spicy flavor often compliments Chinese cuisine, recommended to cleanse the palate and used in herbal teas.</p>
+
+        </div>
+    </div>      
+
+         
+    </article>
+  </div>  
+</div>   
+         
+<!--footer-->
+<footer>
+    <div class="container">
+        <div class="pull-left">
+        <p>Copyright &copy;2018 Food World. All rights reserved</p>
+        </div>
+      <div class="pull-right">
+          <p>Follow us on:</p>
+            <!-- icons imporeted from "font-awseome.min.css" library-->
+            <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"></a>
+            <a href="https://plus.google.com/+googleplus" class="fa fa-google"></a>
+            <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+            <a href="https://www.pinterest.co.uk/" class="fa fa-pinterest"></a>
+        </div>
+  </div> 
+</footer>  
+</body>
+</html>

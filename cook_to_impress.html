@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cook To Impress | Food World</title>
+    <link rel="shortcut icon" type="image/png" href="img/food%20world.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is a magazine website about recipes and other related content">
+    <meta name="keywords" content="recipes, food quizzes, interviews of chefs, and cooking tips">
+    <meta name="author" content="Alba Haque Sultana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS library -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google font-family link, which I used on the CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <!-- My website's CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Below is the link of "font awesome icons" to display the social media links, by writing the prefix of "fa" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Boostrap JS library-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- My website's general JavaScipt link-->
+    <script src="js/funtionality.js"></script>
+</head>
+    
+<body>
+<!-- below the top navegation code starts, which contains the current data and a search bard found on the form-->
+<header class="top-nav">
+    <div class="container"> 
+       <div class="date"></div> 
+           <form>
+                <div class="input-group">
+                    <input id="mySearch"  type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+    </div>   
+</header>
+    
+<!-- Below starts the nav bar, where many used classes are pre-made in bootstrap -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a href="index.html" data-toggle="tooltip" title="Home"><img src="img/food%20world.png" height="80" width="100" alt="Food World"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="text-nav">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          
+        <li><a href="index.html">Home</a></li>
+          
+        <li class="dropdown active">
+          <a href="recipes.html" class="dropdown-toggle newcolor" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes<span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="breakfast.html">Breakfast</a></li>
+            <li><a href="cook_to_impress.html">Cook to impress</a></li>
+            <li><a href="everyday_meals.html">Everyday meals</a></li>
+            <li><a href="deserts.html">Deserts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="guide_spices.html">A guide to spices</a></li>
+          </ul>
+        </li>
+          
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="cooking_tips.html">Cooking tips</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+    </div>
+  </div> <!--/.container-fluid -->
+</nav>
+    
+<!--Sroll up button-->
+<button onclick="topFunction()" id="topBtn" title="Go to top">Up</button> 
+
+<!--Occasion recipes  cards with modal inside dipsplaying the recipes-->
+  <div class="container">
+     <div class="wrapper">
+        <h1>Cook to impress on occasions</h1>
+          <!-- the first row which will have 2 coloumns in destkops-->
+         <div class="row">
+            <div class="col-md col-sm-6">
+                <!--I will be using the build-in card class in bootstrap to display a card format-->
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/honey_mustard_potatoes.jpg" class="img-responsive" alt="parsnip and potato bake">
+                  <div class="card-title">
+                    <h3>Honey-mustard parsnip and potato bake</h3>
+                  </div>
+                  <div class="card-text">
+                      <p>A delicious creamy and flavourful vegeterian bake, seasoned with mustard.</p>
+                      
+                      
+                      
+                   <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal9">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModal9">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel9">Honey-mustard parsnip and potato bake</h4>
+                          </div>
+                          <div class="modal-body">
+
+                            <!-- recipe ingredients and method in modal-->
+                            <aside>
+                                 <div class="ingridients"> 
+                                    <h3>Ingredients:</h3>
+                                    <ul>
+                                        <li>2 tbsp clear honey</li>
+                                        <li>2 tbsp white wine vinegar</li>
+                                        <li>85g fresh white bread, whizzed to crumbs</li>
+                                        <li>25g grated parmesan</li>
+                                    </ul>
+                                </div>
+                            </aside>
+
+                            <article>
+                                <h3>Method:</h3>
+                                <p>1- Bring a large pan of salted water to the boil. Tip in the potatoes and parsnips, bring back to the boil and simmer for 5 mins. Gently drain so they don’t rough up too much, then tip into a baking dish.</p>
+
+                                <p>2- Melt the butter in a big saucepan, then stir in the flour and cook for 2 mins. Gradually stir in the milk to a smooth, lump-free sauce. Cook gently, stirring constantly, until the sauce is nicely thickened – about 5 mins. Stir in the mustard, honey, vinegar and some seasoning. Pour evenly over the potatoes. Mix the crumbs and cheese together, then scatter over the top and set aside until ready to bake. You can cover the dish and chill for up to 24 hrs before finishing.</p>
+
+                                <p>3- Cook the bake at 200C/180C fan/ gas 6 for 30-40 mins until the top is crisp and golden and the sauce hot through.</p>
+                            </article>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- modal ends-->
+                  </div>
+                 <br>
+              </div>  
+             </div>
+            </div>
+            <div class="col-md col-sm-6">
+            
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/lamb-sticks-.jpg" class="img-responsive" alt="Lamb sicks">
+                  <div class="card-title">
+                    <h3>Mini Lamb Satay Sticks</h3>
+                  
+                  </div>
+                  <div class="card-text">
+                      <p>This dish will definetely be a winner for your guests, plus is super easy to prepere.</p>
+                      <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal10">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModal10">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel10">Mini Lamb Satay Sticks</h4>
+                          </div>
+                          <div class="modal-body">
+
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>375g lamb neck fillet, cut into 1.5cm cubes</li>
+                                    <li>1 large garlic clove, peeled and crushed</li>
+                                    <li>1 x 2.5cm piece fresh root ginger, peeled and finely chopped</li>
+                                    <li>1 x 200g jar prepared Satay sauce</li>
+                                    <li>Sliced red onions, to garnish</li>
+                                    <li>Salt and freshly milled black pepper</li>
+
+                                </ul>
+                                <p>You will also need: Mini wooden kebab skewers, that have been soaked in cold water for 20 minutes.</p>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>1-Put the lamb cubes in a large bowl; add the garlic, ginger, seasoning and half the satay sauce. Mix together. Preheat the grill to moderate.</p>
+                            <p>2-Thread the lamb onto the skewers and cook under the grill for 4-6 minutes on each side.Meanwhile, warm the remaining satay sauce and transfer to a small bowl. Scatter over the chopped peanuts.</p>
+                            <p>3-Serve the lamb satay on top of the red onion slices and the warm sauce.</p>
+                        </article>
+                        </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                    <!-- modal ends-->    
+                  </div>
+                  <br> 
+              </div>  
+             </div>  
+            </div>
+         </div>
+
+        <!-- the second row which will have 2 coloumns in destkops-->  
+        <div class="row">
+            <div class="col-md col-sm-6">
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/apricot-glazed-chicken.jpg" alt="apricot chicken" class="img-responsive ">
+                  <div class="card-title">
+                    <h3>Apricot Glazed Chicken with Dijon mustard</h3>
+                  
+                  </div>
+                  <div class="card-text">
+                      <p>A traditional chicken roast with a mordern twist by adding apricots. This is the perfect main in gatherings.</p>
+                      <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal11">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModal11">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel11">Apricot Glazed Chicken</h4>
+                          </div>
+                          <div class="modal-body">
+
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>One 5-to-6-pound roasting chicken, giblets removed</li>
+                                    <li>Salt and freshly ground black pepper</li>
+                                    <li>5 tablespoons unsalted butter, softened</li>
+                                    <li>1 tablespoon chopped fresh parsley, optional</li>
+                                    <li>3 cloves garlic, finely chopped</li>
+                                    <li>1/4 cup apricot preserves</li>
+                                    <li>1 tablespoon Dijon mustard</li>
+                                    <li>1 teaspoon cider vinegar</li>
+                                    <li>1 cup chicken broth</li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>1- Preheat the oven to 375 degrees F. Rinse the chicken with cool water and pat dry. Place the chicken in a roasting pan on a rack, breast side up. Sprinkle the cavity of the chicken with salt and pepper. Tuck the wing tips under the back of the chicken. </p>
+                            <p>2- Combine 4 tablespoons butter, parsley if using, 1/2 teaspoon salt and 1/4 teaspoon pepper in a small bowl. Loosen the skin on the breast of the chicken by gently wriggling fingers under the skin. Rub outside of the chicken with about 1 tablespoon of the butter mixture. Rub the remaining mixture under the skin of the chicken breast. Sprinkle chicken with additional salt and pepper. Roast the chicken for 1 hour 15 minutes.</p>
+                            <p>3- Meanwhile, melt the remaining 1 tablespoon butter in a small saucepan over medium-low heat. Add the garlic Pour the juices from the pan into a degreasing cup or glass measuring cup. Pour or spoon off excess fat and discard. Add the chicken broth to the roasting pan and place directly on a burner over medium heat. Add the pan drippings and cook, stirring with a wooden spoon, and scraping up any browned bits, until the mixture is hot, about 2 minutes. Strain and pour into a gravy boat and season with salt and pepper. Carve the chicken and serve with the sauce.and cook, stirring, until fragrant but not browned, about 2 minutes. Spoon the garlic out of the saucepan and discard. Add the apricot preserves, mustard and vinegar and cook, stirring, until warmed through and combined, about 2 minutes. Set aside to cool until ready to glaze the chicken.</p>
+                            <p>4- Increase the oven temperature to 425 degrees F. Remove the chicken from the oven and brush evenly with the apricot glaze. Continue roasting until an instant-read thermometer stuck into the chicken thigh registers 160 degrees F, about 15 minutes more. Tip the chicken so the juices run into the pan. Transfer the chicken to a cutting board and loosely tent with foil.</p>
+                            <p>5- Pour the juices from the pan into a degreasing cup or glass measuring cup. Pour or spoon off excess fat and discard. Add the chicken broth to the roasting pan and place directly on a burner over medium heat. Add the pan drippings and cook, stirring with a wooden spoon, and scraping up any browned bits, until the mixture is hot, about 2 minutes. Strain and pour into a gravy boat and season with salt and pepper. Carve the chicken and serve with the sauce.</p>
+                        </article>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                       </div>
+                    </div>
+                 </div>
+                    <!-- modal ends-->    
+                </div>
+                  <br>
+              </div>  
+             </div>  
+            </div>
+             
+            <div class="col-md col-sm-6">
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/sprouts_pomegranate-sesame.jpg" class="img-responsive" alt="Burnt sprouts with pomegranate and sesame">
+                  <div class="card-title">
+                    <h3>Burnt sprouts with pomegranate & sesame</h3>
+                  
+                  </div>
+                  <div class="card-text">
+                      <p>This is the perfect side dish to impress your loved ones, with the minimal number of ingridients.</p>
+                      <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal12">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModal12">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel12">Burnt sprouts with pomegranate & sesame</h4>
+                          </div>
+                          <div class="modal-body">
+
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>3 tbsp rapeseed or sunflower oil</li>
+                                    <li>400g Brussels sprouts, halved</li>
+                                    <li>25g cold butter, diced</li>
+                                    <li>1 tbsp sesame seeds</li>
+                                    <li>100g pomegranate seeds</li>
+
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>1- Heat the oil in a large frying pan over a medium heat. Put the sprouts in the pan, cut-side down, and leave them to sizzle away happily for 10 mins without disturbing them./p>
+                            
+                            <p>2- Halfway through cooking, dot over the butter and leave it to sizzle and brown – the sprouts need to be really crispy and dark brown. If they are just lightly brown, carry on cooking for another 5-10 mins.</p>
+                            
+                            <p>3- Scatter over the sesame seeds and stir-fry everything until the seeds are toasted. Off the heat, toss through the pomegranate seeds, then season the sprouts with salt and tip into a serving dish. Drizzle with the pomegranate molasses before serving.</p>
+                        </article>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                       </div>
+                    </div>
+                 </div>
+                    <!-- modal ends--> 
+
+                  </div>
+                  <br>
+              </div>  
+             </div>  
+            </div>
+         </div>
+     </div>        
+    </div> 
+<!--footer-->
+ <footer>
+<div class="container">
+
+    <div class="pull-left">
+        <p>Copyright &copy;2018 Food World. All rights reserved.</p>
+    </div>
+    
+    <div class="pull-right">
+        <p>Follow us on:</p>
+        <!-- social media icons imported from "font-awseome.min.css" library-->
+        <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/+googleplus" class="fa fa-google"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+        <a href="https://www.pinterest.co.uk/" class="fa fa-pinterest"></a>
+    </div>
+</div>  
+</footer>   
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food IQ | Food World</title>
+    <link rel="shortcut icon" type="image/png" href="img/food%20world.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is a magazine website about recipes and other related content">
+    <meta name="keywords" content="recipes, food quizzes, interviews of chefs, and cooking tips">
+    <meta name="author" content="Alba Haque Sultana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS library -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google font-family link, which I used on the CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <!-- My website's CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Below is the link of "font awesome icons" to display the social media links, by writing the prefix of "fa" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- JavaScripts-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/funtionality.js"></script>
+  </head>
+<body>
+<!--Navegtaion-->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a href="index.html" data-toggle="tooltip" title="Home"><img src="img/food%20world.png" height="80" width="100" alt="Food World"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="text-nav">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="recipes.html" class="dropdown-toggle newcolor" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="breakfast.html">Breakfast</a></li>
+            <li><a href="cook_to_impress.html">Cook to impress</a></li>
+            <li><a href="everyday_meals.html">Everyday meals</a></li>
+            <li><a href="deserts.html">Deserts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="guide_spices.html">A guide to spices</a></li>
+          </ul>
+        </li>
+        <li><a href="interviews.html">Interviews</a></li>
+        <li class="active"><a href="quizzes.html" class="color-me" >Quizzes <span class="sr-only">(current)</span></a></li>
+        <li><a href="cooking_tips.html">Cooking tips</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    </div>
+  </div> <!--/.container-fluid -->
+    
+</nav>
+
+<!--quizz--> 
+
+ <div class="container">
+     <div class="wrapper">
+        <div id = "foodIQ"></div>
+     
+<script>
+            
+ var quizName = "How's your general knowledge on food and cooking?";
+//array of objects, to describe information about ecah of those questions, such as the image, the answer and its reason.
+ var quiz = [
+        {
+            "question" : "1)What's the name of this fruit?",
+            "image" : "img/Quizzes/rambutan.jpg",
+            "choices" : ["Rambutan", "Lychee", "Mangosteen", "Start fruit"],
+            "correct" : "Rambutan",
+            "reason" : "It is a rambutan",
+        },
+        {
+            "question" : "2) What is a cucumber ?",
+            "image" : "img/Quizzes/cucumber.png",
+            "choices" : ["Fruit", "Vegetable", "Lentil", "Wholegrain"],
+            "correct" : "Fruit",
+            "reason" : "Many think that a cucumber is a vegetable, but  it is actually a fruit",
+        },
+        {
+            "question" : "3) Which country invented tomato soup?",
+            "image" : "img/Quizzes/tomato_soup.jpg",
+            "choices" : ["Algeria", "Brazil", "Germany", "Spain"],
+            "correct" : "Spain",
+            "reason" : "The tomato soup, known as gazpacho, is a very popular summer soup in Spain",
+        },
+        {
+            "question" : "4) Which fruit contains the most vitamin A?",
+            "image" : "img/Quizzes/vitmain_a.jpg",
+            "choices" : ["Papaya", "Mango", "Cantaloupe", "Pineapple"],
+            "correct" : "Mango",
+            "reason" : "it is a mango",
+        },
+        {
+            "question" : "5) What’s the essential ingredient in a pesto sauce?",
+            "image" : "img/Quizzes/pesto.jpg",
+            "choices" : ["Olive oil", "Corineder leaves", "Pine nuts", "Nutmeg"],
+            "correct" : "Pine nuts",
+            "reason" : "The essential ingredient out of the options was pine nuts",
+        },   
+    ];
+//variables for current question, current score, they start at 0, 
+ var currentquestion = 0,
+     score = 0,
+     submt = true,
+     picked;
+
+ jQuery(document).ready(function ($) {
+
+     function htmlEncode(value) {
+         return $(document.createElement('div')).text(value).html();
+     }
+
+//     adding choices as a li element
+     function addChoices(choices) {
+         if (typeof choices !== "undefined" && $.type(choices) == "array") {
+             $('#choice-block').empty();
+             for (var i = 0; i < choices.length; i++) {
+                 $(document.createElement('li')).addClass('choice choice-box').attr('data-index', i).text(choices[i]).appendTo('#choice-block');
+             }
+         }
+     }
+
+     function nextQuestion() {
+         submt = true;
+         $('#reason').empty();
+         $('#question').text(quiz[currentquestion]['question']);
+         $('#pager').text('Question ' + Number(currentquestion + 1) + ' of ' + quiz.length);
+         if (quiz[currentquestion].hasOwnProperty('image') && quiz[currentquestion]['image'] != "") {
+             if ($('#question-image').length == 0) {
+                 $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question'])).insertAfter('#question');
+             } else {
+                 $('#question-image').attr('src', quiz[currentquestion]['image']).attr('alt', htmlEncode(quiz[currentquestion]['question']));
+             }
+         } else {
+             $('#question-image').remove();
+         }
+         addChoices(quiz[currentquestion]['choices']);
+         setupButtons();
+     }
+     // check if answer selctecd if right= green, or wrong=red
+     function processQuestion(choice) {
+         if (quiz[currentquestion]['choices'][choice] == quiz[currentquestion]['correct']) {
+             $('.choice').eq(choice).css({
+                 'background-color': '#2ed42e'
+             });
+             $('#reason').html('<strong>Correct!</strong> ' + htmlEncode(quiz[currentquestion]['reason']));
+             score++;
+         } else {
+             $('.choice').eq(choice).css({
+                 'background-color': '#ea450e'
+             });
+             $('#reason').html('<strong>Incorrect.</strong> ' + htmlEncode(quiz[currentquestion]['reason']));
+         }
+         currentquestion++;
+         $('#submitbutton').html('NEXT &raquo;').on('click', function () {
+             if (currentquestion == quiz.length) {
+                 resultQuiz();
+             } else {
+                 $(this).text('Check Your Answer').css({
+                     'color': '#222'
+                 }).off('click');
+                 nextQuestion();
+             }
+         })
+     }
+          //choosing option first hovering then clicking
+     function setupButtons() {
+         $('.choice').on('mouseover', function () {
+             $(this).css({
+                 'background-color': '#C8C8C8'
+             });
+         });
+         $('.choice').on('mouseout', function () {
+             $(this).css({
+                 'background-color': '#ffffff'
+             });
+         })
+         $('.choice').on('click', function () {
+             picked = $(this).attr('data-index');
+             $('.choice').removeAttr('style').off('mouseout mouseover');
+             $(this).css({
+                 'border-color': '#000000',
+                 'font-weight': 500,
+                 'background-color': '#dd8c40'
+             });
+             if (submt) {
+                 submt = false;
+                 $('#submitbutton').css({
+                     'color': '#000'
+                 }).on('click', function () {
+                     $('.choice').off('click');
+                     $(this).off('click');
+                     processQuestion(picked);
+                 });
+             }
+         })
+     }
+     //function to display the results , the score is the numbers of questions times 100, out of 100%
+     function resultQuiz() {
+         $('#reason').empty();
+         $('#question').empty();
+         $('#choice-block').empty();
+         $('#submitbutton').remove();
+         $('#question').text("You got " + score + " out of " + quiz.length + " correct.");
+         $(document.createElement('h2')).css({
+             'text-align': 'center',
+             'font-size': '4em'
+         }).text(Math.round(score / quiz.length * 100) + '%').insertAfter('#question');
+     }
+
+
+     function init() {
+           //title initialise quiz
+         if (typeof quizName !== "undefined" && $.type(quizName) === "string") {
+             $(document.createElement('h1')).text(quizName).appendTo('#foodIQ');
+         } else {
+             $(document.createElement('h1')).text("Quiz").appendTo('#foodIQ');
+         }
+
+         //add pager and questions
+         if (typeof quiz !== "undefined" && $.type(quiz) === "array") {
+             // pager
+             $(document.createElement('p')).addClass('pager').attr('id', 'pager').text('Question 1 of ' + quiz.length).appendTo('#foodIQ');
+             //first question
+             $(document.createElement('h2')).addClass('question').attr('id', 'question').text(quiz[0]['question']).appendTo('#foodIQ');
+             // image if present
+             if (quiz[0].hasOwnProperty('image') && quiz[0]['image'] != "") {
+                 $(document.createElement('img')).addClass('question-image').attr('id', 'question-image').attr('src', quiz[0]['image']).attr('alt', htmlEncode(quiz[0]['question'])).appendTo('#foodIQ');
+             }
+             $(document.createElement('p')).addClass('reason').attr('id', 'reason').html('&nbsp;').appendTo('#foodIQ');
+
+             //questions holder
+             $(document.createElement('ul')).attr('id', 'choice-block').appendTo('#foodIQ');
+
+             //choices
+             addChoices(quiz[0]['choices']);
+
+             //submit button
+             $(document.createElement('div')).addClass('choice-box').attr('id', 'submitbutton').text('Check Your Answer').css({
+                 'font-weight': 500,
+                 'color':  '#000000',
+                 'padding': '30px 0'
+             }).appendTo('#foodIQ');
+
+             setupButtons();
+         }
+     }
+
+     init();
+ });           
+            
+</script> 
+ </div>    
+</div> 
+<!--footer--> 
+<footer>
+<div class="container">
+
+    <div class="pull-left">
+        <p>Copyright &copy;2018 Food World. All rights reserved.</p>
+    </div>
+    
+    <div class="pull-right">
+        <p>Follow us on:</p>
+        <!-- social media icons imported from "font-awseome.min.css" library-->
+        <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/+googleplus" class="fa fa-google"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+        <a href="https://www.pinterest.co.uk/" class="fa fa-pinterest"></a>
+    </div>
+</div>  
+</footer>
+</body>
+</html>

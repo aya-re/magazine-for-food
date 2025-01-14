@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quizzes | Food World</title>
+    <link rel="shortcut icon" type="image/png" href="img/food%20world.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is a magazine website about recipes and other related content">
+    <meta name="keywords" content="recipes, food quizzes, interviews of chefs, and cooking tips">
+    <meta name="author" content="Alba Haque Sultana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS library -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google font-family link, which I used on the CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <!-- My website's CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Below is the link of "font awesome icons" to display the social media links, by writing the prefix of "fa" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Boostrap JS library-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- My website's general JavaScipt link-->
+    <script src="js/funtionality.js"></script>
+  </head>
+<body>
+<!-- below the top navegation code starts, which contains the current data and a search bard found on the form-->
+<header class="top-nav">
+    <div class="container"> 
+       <div class="date"></div> 
+           <form>
+                <div class="input-group">
+                    <input id="mySearch"  type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+    </div>   
+</header>
+<script>
+//   Below I have cretaed a function, which was 2 variables. Also if any values from targetNames are written on the search, the assigned address next to it will be opened.
+    function opener() {
+        var text = document.getElementById('mySearch').value;
+        var targetNames = {
+            potato : "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            muffin :"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            chicken : "http://doc.gold.ac.uk/~ahaqu002/webdev/cook_to_impress.html",
+            lamb: "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            cakes:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            pudding:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            lasagne:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            risotto:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            quiz:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            games:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            spices:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+            herbs:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+        };
+        if (text in targetNames) {
+            window.open(targetNames[text]);  
+        }
+    }
+    document.getElementById('mySearch').addEventListener('keyup', opener, false);
+</script>
+<!-- Below starts the nav bar, where many used classes are pre-made in bootstrap -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a href="index.html" data-toggle="tooltip" title="Home"><img src="img/food%20world.png" height="80" width="100" alt="Food World"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="text-nav">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="recipes.html" class="dropdown-toggle newcolor" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="breakfast.html">Breakfast</a></li>
+            <li><a href="cook_to_impress.html">Cook to impress</a></li>
+            <li><a href="everyday_meals.html">Everyday meals</a></li>
+            <li><a href="deserts.html">Deserts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="guide_spices.html">A guide to spices</a></li>
+          </ul>
+        </li>
+        <li><a href="interviews.html">Interviews</a></li>
+        <li class="active"><a href="quizzes.html" class="color-me" >Quizzes <span class="sr-only">(current)</span></a></li>
+        <li><a href="cooking_tips.html">Cooking tips</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    </div>
+  </div> <!--/.container-fluid -->
+    
+</nav>
+
+<!--quizzes page grid--> 
+<section id="quiz_page">
+ <div class="container">
+     <div class="wrapper">
+        <h1>Quizzes</h1>
+        <p>Feel free to play this month's quizzes and discover the level of your inner chef!</p>
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="qz text-center">TEST HOW GOOD IS YOUR GENERAL IQ IN FOOD ITEMS AND CUISINE HISTORY</p>
+                <a href="foodQuiz.html"><p class="text-center">PLAY NOW!</p></a>
+                <img src="img/Quizzes/rambutan.jpg" class="img-responsive img-circle" alt="Rambutan friut">
+            </div>
+            <!--bootstrap grid system used-->
+            <div class="col-sm-6">
+              <p class="qz text-center">DO YOU COOK OFTEN? LET'S TEST YOUR GENERAL RECIPE KNOWLEDGE</p>
+              <a href="recipeQuiz.html"><p class="text-center">PLAY NOW!</p></a>
+              <img src="img/Quizzes/veg_barley_soup.jpg" class="img-responsive img-circle" alt="Ingredients of recipe">
+            </div>
+        </div>
+    </div>    
+</div> 
+</section>
+<!--footer-->
+<footer>
+<div class="container">
+
+    <div class="pull-left">
+        <p>Copyright &copy;2018 Food World. All rights reserved.</p>
+    </div>
+    
+    <div class="pull-right">
+        <p>Follow us on:</p>
+        <!-- social media icons imported from "font-awseome.min.css" library-->
+        <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/+googleplus" class="fa fa-google"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+        <a href="https://www.pinterest.co.uk/" class="fa fa-pinterest"></a>
+    </div>
+</div> 
+</footer>
+</body>
+</html>

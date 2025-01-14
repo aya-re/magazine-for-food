@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cooking Tips | Food World</title>
+    <link rel="shortcut icon" type="image/png" href="img/food%20world.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is a magazine website about recipes and other related content">
+    <meta name="keywords" content="recipes, food quizzes, interviews of chefs, and cooking tips">
+    <meta name="author" content="Alba Haque Sultana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS library -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google font-family link, which I used on the CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <!-- My website's CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Below is the link of "font awesome icons" to display the social media links, by writing the prefix of "fa" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- javascript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/funtionality.js"></script>
+</head>
+    
+<body>
+<!-- below the top navegation code starts, which contains the current data and a search bard found on the form-->
+<header class="top-nav">
+    <div class="container"> 
+       <div class="date"></div> 
+           <form>
+                <div class="input-group">
+                    <input id="mySearch"  type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+    </div>   
+</header>
+<script>
+//   Below I have cretaed a function, which was 2 variables. Also if any values from targetNames are written on the search, the assigned address next to it will be opened.
+    function opener() {
+        var text = document.getElementById('mySearch').value;
+        var targetNames = {
+            potato : "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            muffin :"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            chicken : "http://doc.gold.ac.uk/~ahaqu002/webdev/cook_to_impress.html",
+            lamb: "http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            cakes:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            pudding:"http://doc.gold.ac.uk/~ahaqu002/webdev/breakfast.html",
+            lasagne:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            risotto:"http://doc.gold.ac.uk/~ahaqu002/webdev/everyday_meals.html",
+            quiz:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            games:"http://doc.gold.ac.uk/~ahaqu002/webdev/quizzes.html",
+            spices:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+            herbs:"http://doc.gold.ac.uk/~ahaqu002/webdev/guide_spices.html",
+        };
+        if (text in targetNames) {
+            window.open(targetNames[text]);  
+        }
+    }
+    document.getElementById('mySearch').addEventListener('keyup', opener, false);
+</script>    
+<!-- Below starts the nav bar, where many used classes are pre-made in bootstrap -->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a href="index.html"><img src="img/food%20world.png" height="80" width="100" alt="Food World"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="text-nav">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          
+        <li><a href="index.html">Home</a></li>
+          
+        <li class="dropdown">
+          <a href="recipes.html" class="dropdown-toggle newcolor" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="breakfast.html">Breakfast</a></li>
+            <li><a href="cook_to_impress.html">Cook to impress</a></li>
+            <li><a href="everyday_meals.html">Everyday meals</a></li>
+            <li><a href="deserts.html">Deserts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="guide_spices.html">A guide to spices</a></li>
+          </ul>
+        </li>
+          
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li class="active"><a href="cooking_tips.html">Cooking tips <span class="sr-only">(current)</span></a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+    </div>
+  </div> <!--/.container-fluid -->
+</nav>
+ 
+<!--Sroll up button-->
+<button onclick="topFunction()" id="topBtn" title="Go to top">Up</button> 
+    
+<!--Flippaple cards which have cooking tips-->
+ <div class="container">
+     <div class="wrapper">
+        <h1>Cooking tips  </h1>
+
+        <section>
+            <p>Feel free to find out for yourself this month's top cooking tips by hovering on the numbers.</p>
+            <div class="container">
+
+                <!-- card 1 -->    
+                <div class="cards">
+                        <div class="front">
+                            <p class="par">Do you have trouble blending?
+                            Always put your liquids in your blender first—water, juice, broths—and then load your more solid ingredients—veggies, leafy greens, fruits.
+                            </p>
+                        </div>
+                        <div class="back">
+                            <img src="img/Cooking_Tips/1_blend.jpg" alt="blending">
+                            <div class="carousel-caption">
+                                <h2 class="colour-h">1</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="cards">
+                        <div class="front">
+                            <p class="par">No more crying over onions! Put onions in ice water for 10 minutes before cutting them; this prevents them from causing your eyes to water.</p>
+                        </div>
+                        <div class="back">
+                            <img src="img/Cooking_Tips/2_onion.jpg" alt="onions">
+                            <div class="carousel-caption">
+                                <h2 class="colour-h">2</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="cards">
+                        <div class="front">
+                            <p class="par">Would you like crispy fries? Slice the potato, then remove the starch by soaking in water for one hour before baking or frying.</p>
+                        </div>
+                        <div class="back">
+                            <img src="img/Cooking_Tips/3_fries.jpeg" alt="fries">
+                            <div class="carousel-caption">
+                                <h2 class="colour-h">3</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="cards">
+                        <div class="front">
+                            <p class="par">Soggy leafy greens? To make leafy greens last longer, wrap them in damp paper towels and place in a sealable plastic bag before storing.</p>
+                        </div>
+                        <div class="back">
+                            <img src="img/Cooking_Tips/4_greens.jpg" alt="leafy greens">
+                            <div class="carousel-caption">
+                                <h2 class="colour-h">4</h2>
+                             </div>
+                        </div>
+                    </div>
+                    <!-- card 5 -->
+                    <div class="cards">
+                        <div class="front">
+                            <p class="par">Even after washing with soap, you struggle to keep the cutting board clean? Disinfect wood cutting boards by hand washing it with vinegar.</p>
+                        </div>
+                        <div class="back">
+                            <img src="img/Cooking_Tips/5_board.jpg" alt="cleaning the board">
+                            <div class="carousel-caption">
+                                <h2 class="colour-h">5</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 6 -->
+                    <div class="cards">
+                        <div class="front">
+                            <p class="par">Peel tomatoes with ease! Cut an X in the top, and then simmer in a pot of hot water for 15 to 30 seconds. Once it has cool down and the skin will fall right off.</p>
+                        </div>
+                        <div class="back">
+                            <img src="img/Cooking_Tips/6_tomato.jpg" alt="boiling tomato">
+                            <div class="carousel-caption">
+                                <h2 class="colour-h">6</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--end container-->
+
+        </section>
+        <br>
+<!-- Comments section-->
+        <section>
+        <h2>Comments</h2>
+        <p>Tell us your thoughts on this months cooking tips, or even suggest new ones!</p>
+        <hr>
+
+        <div class="warning" id="comment_section"></div>
+        <div class="commentbox-app">
+            <h4 class="heading">Write below, you can choose to write your name before commenting or keep it anonymous.</h4>
+            <div class="clearfix">
+             <!-- the input for the comment box form-->    
+              <form id="comment-form">
+                <input type="text" id="comment-input" class="comment-input" placeholder="Your comment">
+                <input type="submit" value="Post" class="comment-btn">
+              </form>
+            </div>
+            <!--some premade fixed comments-->
+            <div class="clearfix">
+                <ul id="comment-stream" class="comment-stream">
+                    <li>Alba H. Sultana - I really found tip number 2 very useful, no more crying over onions!!</li>
+
+                    <li>Maya Barton - I definitely agree with tip 5, additionaly, in you want to take away the odor (of crushing garlic, or cutting fresh meat) try rubbing half a lemon on the board. It really works!!</li>
+                </ul>
+            </div>
+        </div>
+        </section>
+         
+<!-- The functions for the comment box are below-->        
+<script>
+    function hideWarning() {
+      document.getElementById('comment_section').style.display = 'none';
+    }
+    //function to show warning is connection is poor or local storage is disabled
+    function showWarning () {
+      document.getElementById('comment_section').style.display = 'block';
+      document.getElementById('comment_section').innerHTML = '<bolder>Warning:</bolder> Sorry, but this commenting section will not function if local storage is disabled , please try later.';
+      console.warn('Sorry, but this commenting section will not function if local storage is disabled , please try later');
+    } 
+    //function to specify type of local stoarge, which is undefined.
+    function supportsLocalStorage () {
+      return typeof localStorage !== 'undefined';
+    }
+    //get the comments and the array and return to local storage
+    function getComments() {
+      return JSON.parse(localStorage.getItem('comments')) || [];
+    }
+    //save the comment if the comment string is geater than 0
+    function saveComment (comments, commentStr, action) {
+      if (!commentStr && comments.indexOf(commentStr) < 0) {
+        action(err);
+      }
+
+      action(undefined, commentStr);
+
+    }
+    //function to write in .li element
+    function appendToStream(stream, str, index) {
+      var li = document.createElement('LI');
+      li.setAttribute('data-index', index);
+      li.innerHTML = str;
+      stream.appendChild(li);
+    }
+    //for loop to get variable commnets and the stream
+    function loadComments(stream) {
+      var comments = getComments();
+      if (comments) 
+      {
+        for (var i = 0; i < comments.length; i++) 
+        {
+          appendToStream(stream, comments[i], i);
+        }    
+      }
+    }
+
+    // if statement to check if  intitApp is supported bt local storsge, otherwise show warning
+    if (supportsLocalStorage()) {
+      initApp();
+    } else {
+      showWarning();
+    }
+    //function to start the comments abd lo`d the comment list
+    function initApp() {
+      hideWarning();
+
+      var commentForm = document.getElementById('comment-form'),
+          commentList = document.getElementById('comment-stream'),
+          commentInput = document.getElementById('comment-input');
+      loadComments(commentList);
+
+
+      commentForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var commStr = commentInput.value,
+            comments = getComments();
+
+        saveComment(comments, commStr, function(err, value) {
+
+          if (err) {
+            return;
+          }
+
+          comments.push(value);
+          localStorage.setItem('comments', JSON.stringify(comments));  
+          appendToStream(commentList, commStr);
+          commentInput.value = '';      
+        });
+
+      }, true);
+    }  
+    </script>
+         
+    </div>
+</div>
+    
+<!--footer-->   
+<footer>
+<div class="container">
+    <div class="pull-left">
+        <p>Copyright &copy;2018 Food World. All rights reserved.</p>
+    </div>
+    
+    <div class="pull-right">
+        <p>Follow us on:</p>
+        <!-- social media icons imported from "font-awseome.min.css" library-->
+        <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"></a>
+        <a href="https://plus.google.com/+googleplus" class="fa fa-google"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+        <a href="https://www.pinterest.co.uk/" class="fa fa-pinterest"></a>
+    </div>
+</div> 
+</footer>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Deserts | Food World</title>
+    <link rel="shortcut icon" type="image/png" href="img/food%20world.ico">
+    <meta charset="utf-8">
+    <meta name="description" content="This is a magazine website about recipes and other related content">
+    <meta name="keywords" content="recipes, food quizzes, interviews of chefs, and cooking tips">
+    <meta name="author" content="Alba Haque Sultana">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS library -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google font-family link, which I used on the CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun" rel="stylesheet">
+    <!-- My website's CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Below is the link of "font awesome icons" to display the social media links, by writing the prefix of "fa" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Boostrap JS library-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- My website's general JavaScipt link-->
+    <script src="js/funtionality.js"></script>
+</head>
+    
+<body>
+<!-- below the top navegation code starts, which contains the current data and a search bard found on the form-->
+<header class="top-nav">
+    <div class="container"> 
+       <div class="date"></div> 
+           <form>
+                <div class="input-group">
+                    <input id="mySearch"  type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+    </div>   
+</header>
+
+    
+<!-- Below starts the nav bar, where many used classes are pre-made in bootstrap -->    
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a href="index.html" data-toggle="tooltip" title="Home"><img src="img/food%20world.png" height="80" width="100" alt="Food World"></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="text-nav">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          
+        <li><a href="index.html">Home</a></li>
+          
+        <li class="dropdown active">
+          <a href="recipes.html" class="dropdown-toggle newcolor" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes<span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="breakfast.html">Breakfast</a></li>
+            <li><a href="cook_to_impress.html">Cook to impress</a></li>
+            <li><a href="everyday_meals.html">Everyday meals</a></li>
+            <li><a href="deserts.html">Deserts</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="guide_spices.html">A guide to spices</a></li>
+          </ul>
+        </li>
+          
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="cooking_tips.html">Cooking tips</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+    </div>
+  </div> <!--/.container-fluid -->
+</nav>
+
+<!--Scroll up button-->
+<button onclick="topFunction()" id="topBtn" title="Go to top">Up</button> 
+
+<!--Deserts recipes  cards with modal inside dipsplaying the recipes-->
+ <div class="container">
+     <div class="wrapper">
+        <h1>Deserts</h1>
+               <!-- the first row which will have 2 coloumns in destkops-->
+         <div class="row">
+            <div class="col-md col-sm-6">
+                  <!--I will be using the build-in card class in bootstrap to display a card format-->
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/expresso_icecream.jpg" class="img-responsive" alt="Expresso and vanialla ice cream">
+                  <div class="card-title">
+                    <h3>Vanilla Ice Cream with Espresso-Caramel Sauce</h3>
+                  </div>
+                  <div class="card-text">
+                      <p>This desert is very simple to prepere, also it will be loved by coffee lovers!</p>
+                      
+                      
+                      
+                   <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal13">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModal13">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel13">Vanilla Ice Cream with Espresso-Caramel Sauce</h4>
+                          </div>
+                          <div class="modal-body">
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>1/4 cup heavy cream</li>
+                                    <li>1 cup granulated sugar</li>
+                                    <li>3 Tbs. brewed espresso</li>
+                                    <li>1 Tbs. Kahlúa (optional)</li>
+                                    <li>3 pints vanilla ice cream</li>
+                                    <li>About 1/2 cup chocolate-covered espresso beans, roughly chopped, for sprinkling</li>
+
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>1- Measure the heavy cream into a liquid measuring cup. Put 1/2 cup water in a small, heavy saucepan with steep (at least 4-inch) sides. Add the sugar and swirl the pan to moisten it. Cover and bring to a boil over medium heat, swirling the pan occasionally, until the sugar dissolves, about 1 minute. Increase the heat to high and cook, still covered but checking frequently, until the sugar starts to turn light brown, 3 to 7 minutes.</p>
+                            
+                            <p>2-  Remove the lid and continue to cook, swirling the pan occasionally, until the sugar turns dark amber, 2 to 4 minutes. Immediately remove the pan from the heat, and slowly and very carefully stir in the heavy cream; it will bubble and splatter. Continue to stir until the sauce is smooth.</p>
+                            
+                            <p>3- Pour the caramel into a small, heatproof bowl, and let it cool slightly. Stir in the espresso and the Kahlúa, if using.</p>
+
+                            <p>To serve: If the caramel is cold or has thickened from sitting, reheat it gently over low heat. Put a scoop or two of ice cream into six individual cups or dishes. Drizzle some caramel on top and sprinkle with a spoonful of espresso beans, if using.
+                            </p>
+                        </article>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- modal ends-->
+                  </div>
+                 <br>
+              </div>  
+             </div>
+            </div>
+             
+            <div class="col-md col-sm-6">
+            
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/biscotti_chocolate.jpg" class="img-responsive" alt="Chocolate with Dipped Cherry-Pistachio Biscotti">
+                  <div class="card-title">
+                    <h3>Chocolate with Dipped Cherry-Pistachio Biscotti</h3>
+                  
+                  </div>
+                  <div class="card-text">
+                      <p>This is the perfect desert recipe to prepare ahead of parties and store.</p>
+                      <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal14">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModal14">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel14">Chocolate-Dipped Cherry-Pistachio Biscotti</h4>
+                          </div>
+                          <div class="modal-body">
+
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>3 oz. (6 Tbs.) unsalted butter, at room temperature; more for the baking sheet</li>
+                                    <li>2/3 cup granulated sugar</li>
+                                    <li>1/2 tsp. table salt</li>
+                                    <li>1-1/2 tsp. pure vanilla extract</li>
+                                    <li>1-1/2 tsp. baking powder</li>
+                                    <li>2 large eggs</li>
+                                    <li>2 cups all-purpose flour</li>
+                                    <li>1 cup coarsely chopped pistachios; more for coating</li>
+                                    <li>1 cup dried sweetened tart cherries</li>
+                                    <li>4 oz. white, semisweet, or 60% dark chocolate, melted</li>
+
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>1-Position a rack in the center of the oven, and heat the oven to 325°F. Lightly grease (or line with parchment) a large rimmed baking sheet.</p>
+                            <p>2-In a stand mixer fitted with the paddle attachment (or with a hand-held mixer and a large bowl), beat the butter, sugar, salt, vanilla, and baking powder until smooth, about 1 minute. Beat in the eggs, and then beat in the flour at low speed until blended; the dough will be sticky. Stir in the pistachios and cherries.</p>
+                            <p>3-Divide the dough in half, and transfer both halves to the prepared baking sheet, leaving space between them. Shape each half into a rectangle about 10-1/2 inches long by 2 inches wide by 3/4 inch tall. Straighten the edges, and smooth the tops; a wet spatula works well here.</p>
+                            <p>4- Bake for 30 minutes, then remove from the oven. Using a spray bottle filled with room-temperature water, lightly but thoroughly spritz the two pieces of dough all over. This will make slicing the biscotti easier. Carefully transfer the dough to a cutting board. Using a sharp chef’s or serrated knife, cut the biscotti on the diagonal, about 1/2 inch to 3/4 inch wide. As you’re slicing, be sure to cut straight up and down, perpendicular to the cutting board.</p>
+                            <p>5- Place the biscotti on the same baking sheet, on edge; they can be very close together. Return the biscotti to the oven, and bake for 25 to 27 minutes, until they feel very dry and are beginning to turn golden. Smaller biscotti may be ready to come out of the oven earlier than the larger ones. Let cool on the baking sheet for 2 minutes, then transfer to a wire rack to cool completely.</p>
+                            <p>6- Dip one end of each cooled biscotti in the melted chocolate, then place on a parchment-lined baking sheet to set. Sprinkle with the chopped pistachios while the chocolate is still soft, if you like. Once the chocolate has set, store the biscotti in an airtight container at room temperature for 1 week; for longer storage, wrap airtight and freeze.</p>
+                        </article>
+                        </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                       </div>
+                    </div>
+                 </div>
+                    <!-- modal ends-->    
+                  </div>
+                  <br> 
+              </div>  
+             </div>  
+            </div>
+         </div>
+         
+        <!-- the first row which will have 2 coloumns in destkops-->
+         <div class="row">
+            <div class="col-md col-sm-6">
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/cupcakes.jpg" class="img-responsive" alt="Fairy cakes">
+                  <div class="card-title">
+                    <h3>Fairy cakes</h3>
+                  
+                  </div>
+                  <div class="card-text">
+                      <p>These are the yummy fairy cakes that can bring together the entire family to decorate them.</p>
+                      <!-- Button trigger modal- starts within recipe card -->
+                      <br>
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal15">
+                          Read more...
+                      </button>
+                      <br>
+                      
+                      <div class="modal fade" id="myModal15" tabindex="-1" role="dialog" aria-labelledby="myModal15">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel15">Fairy cakes</h4>
+                          </div>
+                          <div class="modal-body">
+
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+
+                                    <li>75g butter, softened</li>
+                                    <li>50ml vegetable oil</li>
+                                    <li>125g caster sugar</li>
+                                    <li>2 large eggs</li>
+                                    <li>125g self-raising flour</li>
+                                    <li>2 tbsp milk</li>
+                                    <li> 1 tsp vanilla extract</li>
+
+                                </ul>
+                                <p>                                 To decorate:
+                                    250g icing sugar, food colouring (optional)and your choice of sprinkles such as hundreds and thousands, sugar stars, berries or small sweets.</p>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>1- Heat oven to 180C/160C fan/gas 4. Line 2 x 12 hole bun tins or mini muffin tins with paper cake cases. Put all the fairy cake ingredients into a large bowl and whisk together with electric hand beaters until smooth. If you don’t have these you can use a wooden spoon or balloon whisk (see tip). </p>
+                            <p>2- Dollop the mixture into the prepared cases until it’s all used up. Bake for 10-12 mins or until golden and springy. To be sure they’re cooked through, poke a cocktail stick into the centre of one of the cakes in a middle row – if it comes out cleanly, it’s cooked. Leave to cool in the tin for 5-10mins then transfer to a wire rack to cool completely before decorating.</p>
+                            <p>3- Mix the icing sugar with enough water to make it the consistency of thick cream. Colour some or all of the icing with a few drops of your chosen food colouring(s) then drizzle over the top of the cooled fairy cakes. Sprinkle with your chosen toppings while the icing is still wet. Leave to set firm before serving. Will keep for 2 days in an airtight container.</p>
+                        </article>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                       </div>
+                    </div>
+                 </div>
+                    <!-- modal ends-->    
+                </div>
+                  <br>
+              </div>  
+             </div>  
+            </div>
+             
+            <div class="col-md col-sm-6">
+             <div class="card text-center">
+              <div class="card-block">
+                  <img src="img/Recipes/banana-pudding-parfaitin.jpg" class="img-responsive" alt="banana pudding">
+                  <div class="card-title">
+                    <h3>Brandied Banana Pudding Parfaits </h3>
+                  
+                  </div>
+                  <div class="card-text">
+                      <p>A mildly sweet and creamy desert with crushed bite-size wafers, is perfect to assemble in big batches for the entire family.</p>
+                      <!-- Button trigger modal- starts within recipe card -->
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal16">
+                          Read more...
+                      </button>
+                      <div class="modal fade" id="myModal16" tabindex="-1" role="dialog" aria-labelledby="myModal16">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel16">Brandied Banana Pudding Parfaits</h4>
+                          </div>
+                          <div class="modal-body">
+
+                        <aside>
+                             <div class="ingridients"> 
+                                <h3>Ingredients:</h3>
+                                <ul>
+                                    <li>1 vanilla bean</li>
+                                    <li>3 cups whole milk</li>
+                                    <li>1/3 cup granulated sugar</li>
+                                    <li>5 large egg yolks</li>
+                                    <li>1/4 tsp. kosher salt</li>
+                                    <li> 1/4 cup cornstarch</li>
+                                    <li>5 ripe large bananas; 3 halved lengthwise and <li>sliced into 1/2-inch-thick half-moons, 2 thinly sliced</li>
+                                    <li>1/2 cup plus 1 Tbs. brandy</li>
+                                    <li>1 cup heavy cream</li>
+                                    <li>5 oz. Nilla wafers, crushed into bite-size pieces (about 1/2 cup)</li>
+
+
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <article>
+                            <h3>Method:</h3>
+                            <p>1- Split the vanilla bean in half lengthwise, scrape the seeds into a 2-quart saucepan, and then drop in the pod. Add 2 cups of the milk, the sugar, and salt. Bring to a simmer over medium-low heat, stirring occasionally.In a medium bowl, whisk the remaining 1 cup milk with the cornstarch until smooth. Whisk in the egg yolks, then slowly whisk in the hot milk mixture. Return to the saucepan and cook over low heat, stirring slowly and constantly with a silicone spatula, until smooth and thick, about 4 minutes</p>
+                            
+                            <p>2- Remove from the heat and stir in 1 Tbs. of the brandy.Strain the pudding through a medium-mesh sieve into a wide, shallow bowl. Press plastic wrap directly onto the surface, and then refrigerate until cool, about 45 minutes.</p>
+                            
+                            <p>3- Meanwhile, in a 2-quart saucepan over medium-low heat, simmer the banana half-moons in the remaining 1/2 cup brandy, stirring occasionally, until the brandy is syrupy, about 5 minutes. Let cool to room temperature, about 45 minutes. Fold into the pudding.</p>
+                        
+                            <p>4- In a medium bowl, using a whisk or a hand-held electric mixer, beat the cream until medium peaks form, about 3 minutes.Set aside 3 Tbs. of the crumbled cookies. Layer the rest with the pudding and banana coins in eight glasses. Top each parfait with a dollop of whipped cream. Refrigerate until cold, at least 30 minutes and up to 1 day. Just before serving, sprinkle the reserved crumbled cookies on top.</p>
+                        </article>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                       </div>
+                    </div>
+                 </div>
+                    <!-- modal ends--> 
+
+                  </div>
+                  <br>
+              </div>  
+             </div>  
+            </div>
+         </div>
+     </div>        
+    </div> 
+<!--footer-->
+ <footer>
+    <div class="container">
+<!--     <div class="wrapper">-->
+        <div class="pull-left">
+        <p>Copyright &copy;2018 Food World. All rights reserved</p>
+        </div>
+      <div class="pull-right">
+          <p>Follow us on:</p>
+            <!-- icons imporeted from "font-awseome.min.css" library-->
+            <a href="https://en-gb.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"></a>
+            <a href="https://plus.google.com/+googleplus" class="fa fa-google"></a>
+            <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+            <a href="https://www.pinterest.co.uk/" class="fa fa-pinterest"></a>
+        </div>
+
+  </div> 
+</footer>   
+</body>
+</html>
